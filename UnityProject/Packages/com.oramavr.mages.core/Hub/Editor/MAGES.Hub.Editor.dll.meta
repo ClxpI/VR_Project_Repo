@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: cff90053ebc68c182ffbfe97450b2416
+PluginImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  iconMap:
+    MAGES.Editor.BundleEditor: {instanceID: 0}
+    MAGES.Editor.HubEditor: {instanceID: 0}
+    MAGES.Editor.MAGESMenuItemPriorities: {instanceID: 0}
+    MAGES.Editor.OverridablePropertyPropertyDrawer: {instanceID: 0}
+    MAGES.Editor.ThemeEditor: {instanceID: 0}
+    MAGES.Editor.AssemblyCompatibilityAsset: {instanceID: 0}
+    MAGES.Editor.AssemblyCompatibilityAssetEditor: {instanceID: 0}
+    MAGES.Editor.AssemblyCompatibilityProcessor: {instanceID: 0}
+    MAGES.Editor.PlatformFlags: {instanceID: 0}
+    MAGES.ComponentLibrary.Editor.ArrowGuideEditor: {instanceID: 0}
+    MAGES.Editor.ComponentLibrary.CreateGameObjectMenus: {instanceID: 0}
+    MAGES.Editor.DynamicLabelEditor: {instanceID: 0}
+    MAGES.ComponentLibrary.Editor.EditTimeApplicationQuit: {instanceID: 0}
+    MAGES.ComponentLibrary.Editor.EditTimeCameraLocator: {instanceID: 0}
+    MAGES.Editor.GhostDataPropertyDrawer: {instanceID: 0}
+    MAGES.Editor.GhostEditor: {instanceID: 0}
+    MAGES.ComponentLibrary.Editor.LabelEditor: {instanceID: 0}
+    MAGES.Editor.LookAtObjectEditor: {instanceID: 0}
+    MAGES.Editor.MAGESEditor: {instanceID: 0}
+    MAGES.Editor.PreviewObjectEditor: {instanceID: 0}
+    MAGES.ComponentLibrary.Editor.RotatingLabelEditor: {instanceID: 0}
+    MAGES.Editor.SegmentDataPropertyDrawer: None
+    MAGES.Editor.SegmentEditor: {instanceID: 0}
+    MAGES.Editor.TagLabelEditor: {instanceID: 0}
+    MAGES.Editor.WorldSpaceCanvasEditor: {instanceID: 0}
+    MAGES.Editor.HubModuleEditor: {instanceID: 0}
+    MAGES.Editor.HubModulePropertyDrawer: {instanceID: 0}
+    MAGES.Editor.MAGESPanel: {instanceID: 0}
+    MAGES.Editor.MAGESPanelStartupHelper: {instanceID: 0}
+    MAGES.Editor.BaseMAGESPanelPage: {instanceID: 0}
+    MAGES.Editor.MAGESPanelConfigurationPage: {instanceID: 0}
+    MAGES.Editor.BaseConfigurationTask: {instanceID: 0}
+    MAGES.Editor.ConfigurationTaskState: {instanceID: 0}
+    MAGES.Editor.ConfigurationTaskType: {instanceID: 0}
+    MAGES.Editor.ConfigurationTaskUI: {instanceID: 0}
+    MAGES.Editor.IConfigurationTaskCallbacksReceiver: {instanceID: 0}
+    MAGES.Editor.AnimationRiggingManagmentConfigurationTask: {instanceID: 0}
+    MAGES.Editor.AvatarConfigurationTask: {instanceID: 0}
+    MAGES.Editor.ColourSpaceConfigurationTask: {instanceID: 0}
+    MAGES.Editor.MicrosoftCognitiveServicesConfigurationTask: {instanceID: 0}
+    MAGES.Editor.PhotonNetworkingConfigurationTask: {instanceID: 0}
+    MAGES.Editor.QualityLevelSettings: {instanceID: 0}
+    MAGES.Editor.QualitySettingsConfigurationTask: {instanceID: 0}
+    MAGES.Editor.QualitySettingsValidatorObject: {instanceID: 0}
+    MAGES.Compatibility.Text.Editor.TextMeshProImportConfigurationTask: {instanceID: 0}
+    MAGES.Editor.UniversalRenderPipelineConfigurationTask: {instanceID: 0}
+    MAGES.Editor.URPAsset: {instanceID: 0}
+    MAGES.Editor.XRPluginManagementConfigurationTask: {instanceID: 0}
+    MAGES.Editor.MAGESPanelExtrasPage: {instanceID: 0}
+    MAGES.Editor.MAGESPanelHubPage: {instanceID: 0}
+    MAGES.Editor.MAGESPanelLoginPage: {instanceID: 0}
+    MAGES.Editor.MAGESPanelWelcomePage: {instanceID: 0}
+    MAGES.Migration.Editor.UpdateScriptReferences: {instanceID: 0}
+    MAGES.Editor.SampleEditorWindow: {instanceID: 0}
+    MAGES.Editor.CloseButton: {instanceID: 0}
+    MAGES.Editor.CollapsableTwoPaneSplitView: {instanceID: 0}
+    MAGES.Editor.CollapsableTwoPaneSplitViewResizer: {instanceID: 0}
+    MAGES.Editor.DropDownSelect: {instanceID: 0}
+    MAGES.Editor.DropDownToggle: {instanceID: 0}
+    MAGES.Editor.EditableLabel: {instanceID: 0}
+    MAGES.Editor.InteractionLayerField: {instanceID: 0}
+    MAGES.Editor.InteractionLayerPropertyDrawer: {instanceID: 0}
+    MAGES.Editor.InteractionLayerMaskField: {instanceID: 0}
+    MAGES.Editor.InteractionLayerMaskPropertyDrawer: {instanceID: 0}
+    MAGES.Editor.PopupPanel: {instanceID: 0}
+    MAGES.Editor.Utilities.EditorDelay: {instanceID: 0}
+    MAGES.Editor.EditorDispatcher: {instanceID: 0}
+    MAGES.Editor.Utilities.EditorGameObjectExtensions: {instanceID: 0}
+    MAGES.Editor.Utilities.GenericUtilities: {instanceID: 0}
+    MAGES.Editor.ICloneable: {instanceID: 0}
+    MAGES.Editor.NetUtils: {instanceID: 0}
+    MAGES.Editor.PackageManagerUtility: {instanceID: 0}
+    MAGES.Editor.PrimitiveTypeCloneUtility: {instanceID: 0}
+    MAGES.Editor.Utilities.SerializedObjectExtensions: {instanceID: 0}
+    MAGES.Editor.Utilities.SerializedPropertyReflection: {instanceID: 0}
+    MAGES.Editor.SettingsUtility: {instanceID: 0}
+    MAGES.Editor.TextFieldExtensions: {instanceID: 0}
+    MAGES.Editor.CloneMethodAttribute: {instanceID: 0}
+    MAGES.Attributes.Editor.MAGESTooltipDrawer: {instanceID: 0}
+    MAGES.Editor.DeveloperAuthentication: {instanceID: 0}
+    MAGES.Editor.LicenseLimitsExporter: {instanceID: 0}
+    MAGES.Editor.MAGESOverlay: {instanceID: 0}
+    MAGES.Editor.MAGESOverlayItemAttribute: {instanceID: 0}
+    MAGES.Editor.MAGESSceneViewOverlay: {instanceID: 0}
+    MAGES.Editor.OverlayPlayModeState: {instanceID: 0}
+    MAGES.Editor.CreatePathReferences: {instanceID: 0}
+    MAGES.Editor.GameObjectReferencePropertyDrawer: {instanceID: 0}
+    MAGES.Editor.MethodReferencePropertyDrawer: {instanceID: 0}
+    MAGES.Editor.TypeReferencePropertyDrawer: {instanceID: 0}
+    MAGES.Editor.UniqueIdentifierPropertyDrawer: {instanceID: 0}
+    MAGES.Editor.UniqueReferencePropertyDrawer: {instanceID: 0}
+  executionOrder: {}
+  defineConstraints:
+  - UNITY_EDITOR
+  isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
+  platformData:
+  - first:
+      : Any
+    second:
+      enabled: 0
+      settings:
+        Exclude Editor: 0
+        Exclude Linux64: 1
+        Exclude OSXUniversal: 1
+        Exclude Win: 1
+        Exclude Win64: 1
+  - first:
+      Any: 
+    second:
+      enabled: 0
+      settings: {}
+  - first:
+      Editor: Editor
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+        DefaultValueInitialized: true
+        OS: AnyOS
+  - first:
+      Standalone: Linux64
+    second:
+      enabled: 0
+      settings:
+        CPU: None
+  - first:
+      Standalone: OSXUniversal
+    second:
+      enabled: 0
+      settings:
+        CPU: None
+  - first:
+      Standalone: Win
+    second:
+      enabled: 0
+      settings:
+        CPU: None
+  - first:
+      Standalone: Win64
+    second:
+      enabled: 0
+      settings:
+        CPU: None
+  - first:
+      Windows Store Apps: WindowsStoreApps
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.core/Hub/Editor/MAGES.Hub.Editor.dll
+  uploadId: 717601

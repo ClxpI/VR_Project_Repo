@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 075db356efe93814f9fdc75b52d6d0ad
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.core/Hub/Runtime/Components/UI/Resources/MAGES.ComponentLibrary.UI/Panel.prefab
+  uploadId: 717601

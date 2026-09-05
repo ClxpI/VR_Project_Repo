@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9aec0a8c31fdb49418a31bbdfe821b90
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.core/Hub/Runtime/Modules/Stubs/StubNetworking.asset
+  uploadId: 717601

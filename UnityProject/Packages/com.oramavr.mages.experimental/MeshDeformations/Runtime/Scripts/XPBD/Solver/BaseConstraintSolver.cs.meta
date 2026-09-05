@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: be221b6257fd454479a4a8a3a0189fab
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.experimental/MeshDeformations/Runtime/Scripts/XPBD/Solver/BaseConstraintSolver.cs
+  uploadId: 717601

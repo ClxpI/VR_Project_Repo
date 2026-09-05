@@ -1,0 +1,20 @@
+{
+    "name": "MAGES.Experimental.EmbodimentJARIA.MicrosoftCognitiveServices.Runtime",
+    "rootNamespace": "MAGES.Experimental.EmbodimentJARIA.MicrosoftCognitiveServices",
+    "references": [
+        "MAGES.Experimental.EmbodimentJARIA.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.Hub.Runtime.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "MAGES_MICROSOFT_COGNITIVE_SERVICES"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

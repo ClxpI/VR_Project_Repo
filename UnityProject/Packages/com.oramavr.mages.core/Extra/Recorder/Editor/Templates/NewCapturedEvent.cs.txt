@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using MAGES.Recorder;
+using UnityEngine;
+
+[System.Serializable]
+public class #SCRIPTNAME# : ICapturedEvent
+{
+    [SerializeField]
+    private double createTime;
+
+    [SerializeField]
+    private double captureTime;
+
+    [SerializeField]
+    private long createFrame;
+
+    /// <summary>
+    /// Gets the estimated time (wall-clock time) when the event was created (NOT captured).
+    /// </summary>
+    public double CreateTime => createTime;
+
+    /// <summary>
+    /// Gets the estimated time (wall-clock time) when the event was captured.
+    /// </summary>
+    public double CaptureTime => captureTime;
+
+    /// <summary>
+    /// Gets the frame the event was captured on.
+    /// </summary>
+    public long CreateFrame => createFrame;
+}

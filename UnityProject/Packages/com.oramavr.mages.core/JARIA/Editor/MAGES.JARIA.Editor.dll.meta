@@ -1,0 +1,82 @@
+fileFormatVersion: 2
+guid: 30553dc19f8c0f6a3fdfcd6168abe1b5
+PluginImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  iconMap:
+    MAGES.JARIA.Editor.HistoryDataObject: {instanceID: 0}
+    MAGES.JARIA.Editor.JARIA: {instanceID: 0}
+    MAGES.JARIA.Editor.JARIAPane: {instanceID: 0}
+    MAGES.JARIA.Editor.ResponseData: {instanceID: 0}
+    MAGES.Editor.StoryboardGeneratorPanel: {instanceID: 0}
+  executionOrder: {}
+  defineConstraints:
+  - UNITY_EDITOR
+  isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
+  platformData:
+  - first:
+      : Any
+    second:
+      enabled: 0
+      settings:
+        Exclude Editor: 0
+        Exclude Linux64: 1
+        Exclude OSXUniversal: 1
+        Exclude Win: 1
+        Exclude Win64: 1
+  - first:
+      Any: 
+    second:
+      enabled: 0
+      settings: {}
+  - first:
+      Editor: Editor
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+        DefaultValueInitialized: true
+        OS: AnyOS
+  - first:
+      Standalone: Linux64
+    second:
+      enabled: 0
+      settings:
+        CPU: None
+  - first:
+      Standalone: OSXUniversal
+    second:
+      enabled: 0
+      settings:
+        CPU: None
+  - first:
+      Standalone: Win
+    second:
+      enabled: 0
+      settings:
+        CPU: None
+  - first:
+      Standalone: Win64
+    second:
+      enabled: 0
+      settings:
+        CPU: None
+  - first:
+      Windows Store Apps: WindowsStoreApps
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.core/JARIA/Editor/MAGES.JARIA.Editor.dll
+  uploadId: 717601

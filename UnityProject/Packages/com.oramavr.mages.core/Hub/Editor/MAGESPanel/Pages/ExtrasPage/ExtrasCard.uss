@@ -1,0 +1,43 @@
+:root
+{
+	border-radius: 5px;
+    background-color: #0A0A0A;
+    padding: 10px;
+    width: 160px;
+    height: 160px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    align-items: center;
+    -unity-text-align: upper-left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    flex-grow: initial;
+}
+
+#sample-title
+{
+    white-space: normal;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#sample-description
+{
+    flex-grow:1;
+    font-size: 12px;
+    -unity-font-style: italic;
+    color: #808080;
+    white-space: normal;
+}
+
+Button {
+    background-color: var(--c-pressable-ui-background);
+    font-size: 12px;
+    -unity-font-style: normal;
+    color: var(--c-pressable-ui-text);
+    border-radius: 4px;
+    height: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+}

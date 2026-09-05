@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/ExtrasPage/ExtrasPage.uss?fileID=7433441132597879392&amp;guid=6e31ff1e369cca34e99b936fdd22cd99&amp;type=3#ExtrasPage" />
+    <ui:Label text="Extras" name="title" class="h1" />
+    <ui:Label tabindex="-1" text="Various extra resources to further enchance your MAGES project:&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DeviceLabel" />
+    <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1">
+        <ui:VisualElement name="samples" class="card-container">
+            <ui:Label tabindex="-1" text="Models" parse-escape-sequences="true" display-tooltip-when-elided="true" class="h2 card-container-title" />
+            <ui:VisualElement name="content" style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </ui:ScrollView>
+</ui:UXML>

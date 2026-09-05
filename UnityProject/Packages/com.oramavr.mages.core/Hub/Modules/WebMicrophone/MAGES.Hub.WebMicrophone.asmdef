@@ -1,0 +1,21 @@
+{
+    "name": "MAGES.Hub.WebMicrophone",
+    "rootNamespace": "MAGES.WebMicrophone",
+    "references": [],
+    "includePlatforms": [
+        "Editor",
+        "WebGL"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.Hub.Runtime.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "MAGES_ENABLE_WEB_MICROPHONE"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

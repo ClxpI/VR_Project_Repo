@@ -1,0 +1,195 @@
+fileFormatVersion: 2
+guid: 1c1a21e1309d25de02b27da979cbb376
+PluginImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  iconMap:
+    MAGES.Bundle: {instanceID: 0}
+    MAGES.Hub: {instanceID: 0}
+    MAGES.HubModule: {instanceID: 0}
+    MAGES.PreservationToken: {instanceID: 0}
+    MAGES.Theme: {instanceID: 0}
+    MAGES.ComponentLibrary.ActionScheduler: {instanceID: 0}
+    MAGES.ComponentLibrary.ArrowGuide: {instanceID: 0}
+    MAGES.ComponentLibrary.AxisRotationMonitor: {instanceID: 0}
+    MAGES.ComponentLibrary.CameraLocatorManager: {instanceID: 0}
+    MAGES.DirectionType: {instanceID: 0}
+    MAGES.DynamicLabel: {instanceID: 0}
+    MAGES.FloatingLabel: {instanceID: 0}
+    MAGES.FollowObject: {instanceID: 0}
+    MAGES.GameObjectDestroyListener: {instanceID: 0}
+    MAGES.Ghost: {instanceID: 0}
+    MAGES.ComponentLibrary.ICameraLocator: {instanceID: 0}
+    MAGES.InsertArea: {instanceID: 0}
+    MAGES.ComponentLibrary.Label: {instanceID: 0}
+    MAGES.LookAtObject: {instanceID: 0}
+    MAGES.PreviewObject: {instanceID: 0}
+    MAGES.ComponentLibrary.RotatingLabel: {instanceID: 0}
+    MAGES.Segment: {instanceID: 0}
+    MAGES.TagLabel: {instanceID: 0}
+    MAGES.ComponentLibrary.WaitForAnimatorState: {instanceID: 0}
+    MAGES.WorldSpaceCanvas: {instanceID: 0}
+    MAGES.ComponentLibrary.ApplicationQuitterManager: {instanceID: 0}
+    MAGES.ComponentLibrary.IApplicationQuitter: {instanceID: 0}
+    MAGES.MarkExperimentalAttribute: {instanceID: 0}
+    MAGES.RunOnHubInitializeAttribute: {instanceID: 0}
+    MAGES.ComponentLibrary.Framework.Rig: {instanceID: 0}
+    MAGES.ComponentLibrary.Framework.SpawnPoint: {instanceID: 0}
+    MAGES.LoadingIndicator: {instanceID: 0}
+    MAGES.RuntimeToolsSubModule: {instanceID: 0}
+    MAGES.ComponentLibrary.ColorTheme: {instanceID: 0}
+    MAGES.ComponentLibrary.Spatial.Label.Line: {instanceID: 0}
+    MAGES.ComponentLibrary.SpatialElement: {instanceID: 0}
+    MAGES.ComponentLibrary.SpatialLabel: {instanceID: 0}
+    MAGES.ComponentLibrary.SpatialLayoutSubModule: {instanceID: 0}
+    MAGES.SpatialLoadingDialog: {instanceID: 0}
+    MAGES.ComponentLibrary.SpatialNotificationElement: {instanceID: 0}
+    MAGES.AnalyticsModule: {instanceID: 0}
+    MAGES.LocalizationModule: {instanceID: 0}
+    MAGES.AuthorizationToken: {instanceID: 0}
+    MAGES.IAuthenticationAPI: {instanceID: 0}
+    MAGES.License: {instanceID: 0}
+    MAGES.LicenseLimits: {instanceID: 0}
+    MAGES.ResponseStatusCode: {instanceID: 0}
+    MAGES.Tenant: {instanceID: 0}
+    MAGES.User: {instanceID: 0}
+    MAGES.AuthenticationUrls: {instanceID: 0}
+    MAGES.CredentialsManager: {instanceID: 0}
+    MAGES.SecurePlayerPrefs: {instanceID: 0}
+    MAGES.UserAuthenticationModule: {instanceID: 0}
+    MAGES.CountSchema: {instanceID: 0}
+    MAGES.DataContainerModule: {instanceID: 0}
+    MAGES.EventSchema: {instanceID: 0}
+    MAGES.IMerger: {instanceID: 0}
+    MAGES.ISchema: {instanceID: 0}
+    MAGES.ListSchema: {instanceID: 0}
+    MAGES.NumericMerger: {instanceID: 0}
+    MAGES.Sorter: {instanceID: 0}
+    MAGES.StringMerger: {instanceID: 0}
+    MAGES.DeviceManagerModule: {instanceID: 0}
+    MAGES.DeviceManagerModule.deprecated: {instanceID: 0}
+    MAGES.IGenericInputActions: {instanceID: 0}
+    MAGES.IInteractionActions: None
+    MAGES.ILocomotionActions: None
+    MAGES.IMobile3DActions: {instanceID: 0}
+    MAGES.DriverChangeEventArgs: {instanceID: 0}
+    MAGES.DriverEvent: {instanceID: 0}
+    MAGES.DriverType: {instanceID: 0}
+    MAGES.IDriver: {instanceID: 0}
+    MAGES.InteractionEvents: {instanceID: 0}
+    MAGES.InteractionSystemModule: {instanceID: 0}
+    MAGES.HandPoseMode: {instanceID: 0}
+    MAGES.IControllerInteractor: {instanceID: 0}
+    MAGES.IInteractable: {instanceID: 0}
+    MAGES.IInteractionManager: {instanceID: 0}
+    MAGES.IInteractor: {instanceID: 0}
+    MAGES.InteractionLayer: {instanceID: 0}
+    MAGES.InteractionLayerMask: {instanceID: 0}
+    MAGES.InteractionMode: {instanceID: 0}
+    MAGES.ILocomotionProvider: {instanceID: 0}
+    MAGES.ILocomotionSystem: {instanceID: 0}
+    MAGES.LocomotionPhase: {instanceID: 0}
+    MAGES.Networking.IMAGESNetworkIntegration: None
+    MAGES.Networking.IMAGESObjectSynchronization: {instanceID: 0}
+    MAGES.NetworkingModule: {instanceID: 0}
+    MAGES.ActionState: {instanceID: 0}
+    MAGES.BaseActionData: {instanceID: 0}
+    MAGES.SceneGraph.SceneGraphData: {instanceID: 0}
+    MAGES.SceneGraphModule: {instanceID: 0}
+    MAGES.EffectData: {instanceID: 0}
+    MAGES.EffectDataCollection: {instanceID: 0}
+    MAGES.EffectImplementor: {instanceID: 0}
+    MAGES.SceneGraph.ImplementsEffectAttribute: {instanceID: 0}
+    MAGES.Step: {instanceID: 0}
+    MAGES.StepContainer: {instanceID: 0}
+    MAGES.StepDetailsAttribute: {instanceID: 0}
+    MAGES.StepEvent: {instanceID: 0}
+    MAGES.StubAnalytics: {instanceID: 0}
+    MAGES.StubDataContainer: {instanceID: 0}
+    MAGES.StubDeviceManager: {instanceID: 0}
+    MAGES.StubInteractionSystem: {instanceID: 0}
+    MAGES.StubLocalization: {instanceID: 0}
+    MAGES.StubNetworking: {instanceID: 0}
+    MAGES.SceneGraph.StubSceneGraph: {instanceID: 0}
+    MAGES.StubUserAuthentication: {instanceID: 0}
+    MAGES.SubModule: {instanceID: 0}
+    MAGES.SubModuleDependencyAttribute: {instanceID: 0}
+    MAGES.AnimationUtilities: {instanceID: 0}
+    MAGES.DebugDraw: {instanceID: 0}
+    MAGES.DeletionQueue: {instanceID: 0}
+    MAGES.Utilities.GameObjectExtensions: {instanceID: 0}
+    MAGES.Utilities.GenericUtilities: {instanceID: 0}
+    MAGES.Utilities.GizmoUtilities: None
+    MAGES.LocalMicrophone: {instanceID: 0}
+    MAGES.Utilities.MathUtilities: {instanceID: 0}
+    MAGES.Utilities.ReflectionUtilities: {instanceID: 0}
+    MAGES.Utilities.RuntimeDispatcher: {instanceID: 0}
+    MAGES.Utilities.TransformExtensions: {instanceID: 0}
+    MAGES.UpdatePhase: {instanceID: 0}
+    MAGES.HardAssetReferenceAttribute: {instanceID: 0}
+    MAGES.Attributes.MAGESTooltipAttribute: {instanceID: 0}
+    MAGES.MAGESTooltipStyles: {instanceID: 0}
+    MAGES.Utilities.CameraFadeEffect: {instanceID: 0}
+    MAGES.Utilities.Collections.IdPool: {instanceID: 0}
+    MAGES.Utilities.Collections.RegistrationList: {instanceID: 0}
+    MAGES.Utilities.Collections.SerializableDictionary: {instanceID: 0}
+    MAGES.Utilities.Collections.SerializableHashSet: {instanceID: 0}
+    MAGES.Utilities.GameObjectSpawner: {instanceID: 0}
+    MAGES.Utilities.MAGESObject: {instanceID: 0}
+    MAGES.Utilities.MAGESAudioController: {instanceID: 0}
+    MAGES.DefaultValueLocatorAttribute: {instanceID: 0}
+    MAGES.ILocator: {instanceID: 0}
+    MAGES.OverridableProperty: {instanceID: 0}
+    MAGES.OverridablePropertyBase: {instanceID: 0}
+    MAGES.PropertyCollection: {instanceID: 0}
+    MAGES.PropertyProxyUtilities: {instanceID: 0}
+    MAGES.GameObjectPathReferences: {instanceID: 0}
+    MAGES.GameObjectReference: {instanceID: 0}
+    MAGES.MethodReference: {instanceID: 0}
+    MAGES.TypeReference: {instanceID: 0}
+    MAGES.UniqueIdentifier: {instanceID: 0}
+    MAGES.UniqueIdentifierManager: {instanceID: 0}
+    MAGES.UniqueReference: {instanceID: 0}
+    MAGES.DualQuaternions.DualQuaternion: {instanceID: 0}
+    MAGES.RigidBodyAnimation.RigidbodyAnimationController: {instanceID: 0}
+    MAGES.RigidBodyAnimation.RigidbodyMoveAndRotateDualQuat: {instanceID: 0}
+    MAGES.RigidBodyAnimation.RigidbodyMoveAndRotateDualQuatLocal: {instanceID: 0}
+    MAGES.RigidBodyAnimation.RigidbodyMoveDualQuat: {instanceID: 0}
+    MAGES.RigidBodyAnimation.RigidbodyMoveToTarget: {instanceID: 0}
+    MAGES.RigidBodyAnimation.RigidbodyMoveToTargetLocal: {instanceID: 0}
+    MAGES.RigidBodyAnimation.RigidbodyRotateTo: {instanceID: 0}
+    MAGES.RigidBodyAnimation.IRigidBodyAnimation: {instanceID: 0}
+  executionOrder: {}
+  defineConstraints: []
+  isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
+  platformData:
+  - first:
+      Any: 
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      Editor: Editor
+    second:
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
+  - first:
+      Windows Store Apps: WindowsStoreApps
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.core/Hub/Runtime/MAGES.Hub.Runtime.dll
+  uploadId: 717601

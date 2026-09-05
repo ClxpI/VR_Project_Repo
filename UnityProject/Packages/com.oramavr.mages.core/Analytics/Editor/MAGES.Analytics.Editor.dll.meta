@@ -1,0 +1,105 @@
+fileFormatVersion: 2
+guid: e455c19ce939dc7223d5c3ddcc2e2281
+PluginImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  iconMap:
+    MAGES.Analytics.Editor.BaseAnalyticsUI: {instanceID: 0}
+    MAGES.Analytics.Editor.CustomTypeUI: {instanceID: 0}
+    MAGES.Analytics.Editor.DidNotPerformRequiredActionUI: {instanceID: 0}
+    MAGES.Analytics.Editor.ErrorAngleUI: {instanceID: 0}
+    MAGES.Analytics.Editor.ErrorColliderUI: {instanceID: 0}
+    MAGES.Analytics.Editor.InteractionRestrictionUI: {instanceID: 0}
+    MAGES.Analytics.Editor.PerformedWrongActionUI: {instanceID: 0}
+    MAGES.Analytics.Editor.RangeOfMotionLimitUI: {instanceID: 0}
+    MAGES.Analytics.Editor.RotationRestrictionUI: {instanceID: 0}
+    MAGES.Analytics.Editor.ScoreLimitUI: {instanceID: 0}
+    MAGES.Analytics.Editor.TimeLimitUI: {instanceID: 0}
+    MAGES.Analytics.Editor.WrongAnswerUI: {instanceID: 0}
+    MAGES.Analytics.Editor.ActionPerformedEventUI: {instanceID: 0}
+    MAGES.Analytics.Editor.ActionSkippedEventUI: {instanceID: 0}
+    MAGES.Analytics.Editor.ActionUndoneEventUI: {instanceID: 0}
+    MAGES.Analytics.Editor.BaseTypeEventUI: {instanceID: 0}
+    MAGES.Analytics.Editor.CustomEventTypeUI: {instanceID: 0}
+    MAGES.Analytics.Editor.OnCollisionEventUI: {instanceID: 0}
+    MAGES.Analytics.Editor.OnInteractionEventUI: {instanceID: 0}
+    MAGES.Analytics.Editor.SessionEndedEventUI: {instanceID: 0}
+    MAGES.Analytics.Editor.SessionStartedEventUI: {instanceID: 0}
+    MAGES.Analytics.Editor.MAGESAnalyticsEditor: {instanceID: 0}
+    MAGES.Analytics.Editor.ScenegraphRenameDetector: {instanceID: 0}
+    MAGES.Analytics.Editor.TabbedMenuController: {instanceID: 0}
+    MAGES.Analytics.Editor.BaseAnalyticsStateMachine: {instanceID: 0}
+    MAGES.Analytics.Editor.ErrorsStateMachine: {instanceID: 0}
+    MAGES.Analytics.Editor.EventsStateMachine: {instanceID: 0}
+    MAGES.Analytics.Editor.ObjectivesStateMachine: {instanceID: 0}
+  executionOrder: {}
+  defineConstraints:
+  - UNITY_EDITOR
+  isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
+  platformData:
+  - first:
+      : Any
+    second:
+      enabled: 0
+      settings:
+        Exclude Editor: 0
+        Exclude Linux64: 1
+        Exclude OSXUniversal: 1
+        Exclude Win: 1
+        Exclude Win64: 1
+  - first:
+      Any: 
+    second:
+      enabled: 0
+      settings: {}
+  - first:
+      Editor: Editor
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+        DefaultValueInitialized: true
+        OS: AnyOS
+  - first:
+      Standalone: Linux64
+    second:
+      enabled: 0
+      settings:
+        CPU: None
+  - first:
+      Standalone: OSXUniversal
+    second:
+      enabled: 0
+      settings:
+        CPU: None
+  - first:
+      Standalone: Win
+    second:
+      enabled: 0
+      settings:
+        CPU: None
+  - first:
+      Standalone: Win64
+    second:
+      enabled: 0
+      settings:
+        CPU: None
+  - first:
+      Windows Store Apps: WindowsStoreApps
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.core/Analytics/Editor/MAGES.Analytics.Editor.dll
+  uploadId: 717601

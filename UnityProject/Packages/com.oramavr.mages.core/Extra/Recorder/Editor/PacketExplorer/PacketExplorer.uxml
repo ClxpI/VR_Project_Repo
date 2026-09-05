@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="flex-grow: 1;">
+        <uie:Toolbar style="justify-content: space-between;">
+            <uie:ToolbarButton text="Load" parse-escape-sequences="true" display-tooltip-when-elided="true" name="load-file" />
+            <uie:ToolbarSearchField name="filter-field" />
+        </uie:Toolbar>
+        <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: column;">
+            <ui:ListView focusable="true" name="packet-view" show-border="true" show-bound-collection-size="false" show-alternating-row-backgrounds="All" show-foldout-header="false" style="flex-grow: 0; flex-shrink: 1; flex-direction: column; height: 140px;" />
+            <ui:VisualElement style="flex-grow: 1; align-items: stretch; border-top-color: rgb(255, 255, 255); border-top-width: 1px; padding-top: 4px;">
+                <ui:ScrollView vertical-scroller-visibility="Auto" style="flex-grow: 1;">
+                    <ui:VisualElement name="details" style="background-color: rgba(0, 0, 0, 0); min-height: 200px; min-width: auto;">
+                        <uie:PropertyField name="details-prop" style="justify-content: flex-start;" />
+                    </ui:VisualElement>
+                </ui:ScrollView>
+                <ui:Foldout text="Tree" value="false" style="flex-grow: 0;">
+                    <ui:ScrollView name="tree-view" />
+                </ui:Foldout>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

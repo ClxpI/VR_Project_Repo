@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fae2a68f77105314496333cd4ddc9026
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.core/Hub/Runtime/Resources/Style/Materials/mt.mages.default.ui.nodepth.mat
+  uploadId: 717601

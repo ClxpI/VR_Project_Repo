@@ -1,0 +1,51 @@
+.listElement
+{
+	flex-direction: row;
+	flex-grow: 1;
+}
+
+.listElementLanguage
+{
+	-unity-text-align: middle-center;
+	-unity-font-style: bold;
+	padding-left: 10px;
+	min-width: 50px;
+}
+
+.listElementTranslation
+{
+	width: 50px;
+	flex-grow: 1;
+}
+
+.translatedToken
+{
+	flex-direction: column;
+	flex-grow: 1;
+	padding-bottom: 10px;
+}
+
+.translatedTokenKey
+{
+	min-width: 50px;
+}
+
+.translatedTokenTranslations
+{
+	flex-grow: 1;
+}
+
+TextField
+{
+	margin-right: 3px;
+}
+
+ObjectField
+{
+	margin-right: 3px;
+}
+
+.searchField {
+    color: rgba(255, 0, 0, 255);
+    border-width: 0;
+}

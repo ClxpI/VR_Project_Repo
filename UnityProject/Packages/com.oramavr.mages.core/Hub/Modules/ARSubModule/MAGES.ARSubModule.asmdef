@@ -1,0 +1,20 @@
+{
+    "name": "MAGES.ARSubModule",
+    "rootNamespace": "MAGES.AR",
+    "references": [
+        "Unity.XR.ARFoundation"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.Hub.Runtime.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "MAGES_AR_FOUNDATION"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

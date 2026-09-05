@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 354e0810efa35854c991d608e4cb8952
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 63fdee08d804cfd49937e0c7aa21fb9c, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.experimental/MeshDeformations/Runtime/Scripts/XPBD/Actors/SoftbodyActor.cs
+  uploadId: 717601

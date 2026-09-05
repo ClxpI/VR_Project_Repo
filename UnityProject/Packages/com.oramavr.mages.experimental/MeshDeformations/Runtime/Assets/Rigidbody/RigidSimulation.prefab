@@ -1,0 +1,447 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2258538168674034213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2504835298719621024}
+  - component: {fileID: 8790490970463626982}
+  m_Layer: 0
+  m_Name: HangPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2504835298719621024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2258538168674034213}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.827, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7487133517155420491}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8790490970463626982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2258538168674034213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d38693bfdba9c40a151292d1b0be5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  physicsWorld: {fileID: 1458283866034988354}
+  sharedSimulationMesh: {fileID: 11400000, guid: a223fd53c99d46446af40e66ea2c1aa0,
+    type: 2}
+  <AddedToPhysicsWorld>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <RemovedFromPhysicsWorld>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  layer: 3
+  canCut: 0
+  selfCollision: 0
+  <UpdateKinematicParticles>k__BackingField: 1
+--- !u!1 &3848968094571171354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3359553086715129823}
+  - component: {fileID: 8571809172783572252}
+  - component: {fileID: 2901382205942207358}
+  - component: {fileID: 2378339021743543364}
+  - component: {fileID: 1875613964428095433}
+  m_Layer: 0
+  m_Name: Rigid1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3359553086715129823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848968094571171354}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6811167, y: -0, z: -0, w: 0.7321749}
+  m_LocalPosition: {x: -0.03400004, y: 0.552, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 7487133517155420491}
+  m_LocalEulerAnglesHint: {x: 85.862, y: 0, z: 0}
+--- !u!114 &8571809172783572252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848968094571171354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774d15bac36ba074091520e6a27b62f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  physicsWorld: {fileID: 1458283866034988354}
+  sharedSimulationMesh: {fileID: 11400000, guid: fca4eada5c8892748b6335abc79496b4,
+    type: 2}
+  <AddedToPhysicsWorld>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <RemovedFromPhysicsWorld>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  canCut: 0
+  layer: 1
+--- !u!23 &2901382205942207358
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848968094571171354}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1fd4b786ac6cfc244bc5c6e87473c847, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2378339021743543364
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848968094571171354}
+  m_Mesh: {fileID: -5495902117074765545, guid: af44acb1b4c322c41b4bda7e41d3d79c, type: 3}
+--- !u!114 &1875613964428095433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848968094571171354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3daaa03636535f74db8224b098405ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  simulationMesh: {fileID: 0}
+  connectedSimulationMesh: {fileID: 0}
+  <Actor>k__BackingField: {fileID: 8571809172783572252}
+  <SimulationMeshParticleIndex>k__BackingField: 0
+  <ConnectedActor>k__BackingField: {fileID: 8790490970463626982}
+  <ConnectedSimulationMeshParticleIndex>k__BackingField: 0
+  <TargetDistance>k__BackingField: 0.2
+  <Compliance>k__BackingField: 0
+  <Breakable>k__BackingField: 0
+  <BreakForce>k__BackingField: 1000
+--- !u!1 &7756717880052512830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9037621845258910168}
+  - component: {fileID: 1458283866034988354}
+  - component: {fileID: 8840859775466577286}
+  m_Layer: 0
+  m_Name: PhysicsWorld
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9037621845258910168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7756717880052512830}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.274, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7487133517155420491}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1458283866034988354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7756717880052512830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821491cbb1179a248b92c102afb15a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Simulate>k__BackingField: 1
+  <TimeStep>k__BackingField: 0.01
+  <Gravity>k__BackingField:
+    x: 0
+    y: -9.81
+    z: 0
+  <MaxVelocity>k__BackingField: 10
+  <SleepVelocityThreshold>k__BackingField: 0.01
+  <ParticleRadius>k__BackingField: 0.06
+  <SolverIterations>k__BackingField: 2
+  <FloorHeight>k__BackingField: 0
+  <PhysicsUpdate>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <LatePhysicsUpdate>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <SolveCollisionConstraints>k__BackingField: 1
+  <ContactFriction>k__BackingField: 1
+  <MaxCollisionPairs>k__BackingField: 10000
+  <CollisionConstraintSolverSubSteps>k__BackingField: 1
+  <CollisionConstraintsRelaxationFactor>k__BackingField: 1
+  <SolveDistanceConstraints>k__BackingField: 0
+  <DistanceConstraintSolverSubSteps>k__BackingField: 4
+  <DistanceConstraintsRelaxationFactor>k__BackingField: 1
+  <SolveVolumeConstraints>k__BackingField: 1
+  <VolumeConstraintSolverSubSteps>k__BackingField: 4
+  <VolumeConstraintsRelaxationFactor>k__BackingField: 1
+  <SolveShapeMatchingConstraints>k__BackingField: 1
+  <ShapeMatchingConstraintSolverSubSteps>k__BackingField: 1
+  <ShapeMatchingConstraintsRelaxationFactor>k__BackingField: 1
+  <SolveExtraConstraints>k__BackingField: 1
+--- !u!114 &8840859775466577286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7756717880052512830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f3c0c577b12aa49b67525bc7589b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  physicsWorld: {fileID: 1458283866034988354}
+  <SubSteps>k__BackingField: 2
+  <RelaxationFactor>k__BackingField: 1
+  <DebugGizmos>k__BackingField: 1
+--- !u!1 &7907665674184329872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7487133517155420491}
+  m_Layer: 0
+  m_Name: RigidSimulation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7487133517155420491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7907665674184329872}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.72, y: 1.262, z: -0.868}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9037621845258910168}
+  - {fileID: 2504835298719621024}
+  - {fileID: 3359553086715129823}
+  - {fileID: 4595554057771616473}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8372496832808333465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4595554057771616473}
+  - component: {fileID: 5473165115400449075}
+  - component: {fileID: 3336189354207907930}
+  - component: {fileID: 6786415704106909602}
+  - component: {fileID: 2039897775924026625}
+  m_Layer: 0
+  m_Name: Rigid2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4595554057771616473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372496832808333465}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.248, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 7487133517155420491}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5473165115400449075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372496832808333465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774d15bac36ba074091520e6a27b62f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  physicsWorld: {fileID: 1458283866034988354}
+  sharedSimulationMesh: {fileID: 11400000, guid: 395f2671cc4efc24ca10360395706ea2,
+    type: 2}
+  <AddedToPhysicsWorld>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <RemovedFromPhysicsWorld>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  canCut: 0
+  layer: 2
+--- !u!23 &3336189354207907930
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372496832808333465}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1fd4b786ac6cfc244bc5c6e87473c847, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &6786415704106909602
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372496832808333465}
+  m_Mesh: {fileID: -5495902117074765545, guid: af44acb1b4c322c41b4bda7e41d3d79c, type: 3}
+--- !u!114 &2039897775924026625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372496832808333465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3daaa03636535f74db8224b098405ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  simulationMesh: {fileID: 0}
+  connectedSimulationMesh: {fileID: 0}
+  <Actor>k__BackingField: {fileID: 5473165115400449075}
+  <SimulationMeshParticleIndex>k__BackingField: 4
+  <ConnectedActor>k__BackingField: {fileID: 8571809172783572252}
+  <ConnectedSimulationMeshParticleIndex>k__BackingField: 4
+  <TargetDistance>k__BackingField: 0.2
+  <Compliance>k__BackingField: 0
+  <Breakable>k__BackingField: 0
+  <BreakForce>k__BackingField: 1000

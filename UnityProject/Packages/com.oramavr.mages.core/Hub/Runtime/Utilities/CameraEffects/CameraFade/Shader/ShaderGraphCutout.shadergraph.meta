@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: d98874a8beccf734aab3776bd77f59ca
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.core/Hub/Runtime/Utilities/CameraEffects/CameraFade/Shader/ShaderGraphCutout.shadergraph
+  uploadId: 717601

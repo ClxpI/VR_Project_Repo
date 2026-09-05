@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <uie:PropertyField name="CollisionSoundMaterial" />
+    <ui:Toggle label="Automatic Override" name="AutomaticOverride" />
+    <ui:FloatField label="Mass" value="42.2" name="Mass" />
+    <ui:FloatField label="Strength Multiplier" value="42.2" name="StrengthMultiplier" />
+    <ui:FloatField label="Local Volume" value="42.2" name="LocalVolume" />
+    <ui:FloatField label="Rotation Threshold" value="42.2" name="RotationThreshold" />
+    <ui:FloatField label="Rotation Sensitivity" value="42.2" name="RotationSensitivity" />
+</ui:UXML>

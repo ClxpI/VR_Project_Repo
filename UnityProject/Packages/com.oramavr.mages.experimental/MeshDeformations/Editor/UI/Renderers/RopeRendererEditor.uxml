@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="flex-direction: row;">
+        <ui:Label text="Rope Renderer" name="title" style="-unity-font-style: bold; font-size: 16px; -unity-text-align: middle-left; flex-grow: 1; margin-left: 0;" />
+    </ui:VisualElement>
+    <ui:Label text="Mesh Settings" style="margin-top: 10px; -unity-font-style: bold; font-size: 14px;" />
+    <ui:FloatField label="Thickness" value="0.1" name="thickness" />
+    <ui:IntegerField label="Smoothing Points Per Segment" value="42" name="smoothing-points" />
+    <ui:IntegerField label="Slices" value="42" name="slices" />
+    <uie:PropertyField name="generate-end-caps" />
+    <ui:Label text="Render Settings" style="margin-top: 10px; -unity-font-style: bold; font-size: 14px;" />
+    <uie:PropertyField name="rendering-layer-mask" />
+    <uie:PropertyField name="cast-shadows" />
+    <uie:PropertyField name="receive-shadows" />
+    <uie:PropertyField name="material" />
+</ui:UXML>

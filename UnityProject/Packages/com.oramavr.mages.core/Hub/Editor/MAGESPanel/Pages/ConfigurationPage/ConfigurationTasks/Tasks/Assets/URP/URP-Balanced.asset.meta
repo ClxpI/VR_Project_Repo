@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 53c6d4e4159efa44d952c1d2e2d5db4c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.core/Hub/Editor/MAGESPanel/Pages/ConfigurationPage/ConfigurationTasks/Tasks/Assets/URP/URP-Balanced.asset
+  uploadId: 717601

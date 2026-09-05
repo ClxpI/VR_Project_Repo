@@ -1,0 +1,22 @@
+EditableLabel {
+    align-items: center;
+    flex-direction: row;
+}
+
+EditableLabel > Label {
+    flex-grow: 0;
+    font-size: 12px;
+
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: rgba(255, 255, 255, 0.0);
+}
+
+EditableLabel > TextField {
+    font-size: 12px;
+}
+
+EditableLabel > Label:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    transition: border-color 0.17s ease-in-out;
+}

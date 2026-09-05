@@ -1,0 +1,95 @@
+fileFormatVersion: 2
+guid: 98eef02f1b23f352960d428c59969337
+PluginImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  iconMap:
+    MAGES.Recorder.PreservationToken: {instanceID: 0}
+    MAGES.Recorder.RecorderModule: {instanceID: 0}
+    MAGES.Recorder.Recorder: {instanceID: 0}
+    MAGES.Recorder.GameObjectSpawnerCaptor: {instanceID: 0}
+    MAGES.Recorder.ICaptor: {instanceID: 0}
+    MAGES.Recorder.MicrophoneCaptor: {instanceID: 0}
+    MAGES.Recorder.PointerCaptor: {instanceID: 0}
+    MAGES.Recorder.RigCaptor: {instanceID: 0}
+    MAGES.Recorder.SceneGraphCaptor: {instanceID: 0}
+    MAGES.Recorder.TransformCaptor: {instanceID: 0}
+    MAGES.Recorder.Cloud: {instanceID: 0}
+    MAGES.Recorder.CompressionMethod: {instanceID: 0}
+    MAGES.Recorder.Container: {instanceID: 0}
+    MAGES.Recorder.EndPacket: {instanceID: 0}
+    MAGES.Recorder.EventPacket: {instanceID: 0}
+    MAGES.Recorder.Packet: {instanceID: 0}
+    MAGES.Recorder.PacketHeader: {instanceID: 0}
+    MAGES.Recorder.PacketType: {instanceID: 0}
+    MAGES.Recorder.StandardTypesSerializationSurrogates: {instanceID: 0}
+    MAGES.Recorder.StartPacket: {instanceID: 0}
+    MAGES.Recorder.ICodec: {instanceID: 0}
+    MAGES.Recorder.IDecoder: {instanceID: 0}
+    MAGES.Recorder.IEncoder: {instanceID: 0}
+    MAGES.Recorder.PCM: {instanceID: 0}
+    MAGES.Recorder.WaveCodec: {instanceID: 0}
+    MAGES.Recorder.WaveDecoder: {instanceID: 0}
+    MAGES.Recorder.WaveEncoder: {instanceID: 0}
+    MAGES.Recorder.ClientEnterEvent: {instanceID: 0}
+    MAGES.Recorder.ClientExitEvent: {instanceID: 0}
+    MAGES.Recorder.GameObjectSpawnEvent: {instanceID: 0}
+    MAGES.Recorder.ICapturedEvent: {instanceID: 0}
+    MAGES.Recorder.MicrophoneEvent: {instanceID: 0}
+    MAGES.Recorder.PointerClickEvent: {instanceID: 0}
+    MAGES.Recorder.PointerEnterExitEvent: {instanceID: 0}
+    MAGES.Recorder.PositionChangeEvent: {instanceID: 0}
+    MAGES.Recorder.RotationChangeEvent: {instanceID: 0}
+    MAGES.Recorder.SceneGraphEvent: {instanceID: 0}
+    MAGES.Recorder.IntervalTree: {instanceID: 0}
+    MAGES.Recorder.Player: {instanceID: 0}
+    MAGES.Recorder.ClientChangeInterpreter: {instanceID: 0}
+    MAGES.Recorder.GameObjectSpawnerInterpreter: {instanceID: 0}
+    MAGES.Recorder.IInterpreter: {instanceID: 0}
+    MAGES.Recorder.InterpretsEventAttribute: {instanceID: 0}
+    MAGES.Recorder.MicrophoneInterpreter: {instanceID: 0}
+    MAGES.Recorder.PointerInterpreter: {instanceID: 0}
+    MAGES.Recorder.SceneGraphInterpreter: {instanceID: 0}
+    MAGES.Recorder.TransformationInterpreter: {instanceID: 0}
+    MAGES.Recorder.PlayerSelectionUI: {instanceID: 0}
+    MAGES.Recorder.PlayerUI: {instanceID: 0}
+    MAGES.Recorder.AudioCapture: {instanceID: 0}
+    MAGES.Recorder.AudioFilterReadBroadcaster: {instanceID: 0}
+    MAGES.Recorder.ContinuousPlaybackObject: {instanceID: 0}
+    MAGES.Recorder.GameObjectPathCache: {instanceID: 0}
+    MAGES.Recorder.TransformCaptureGroup: {instanceID: 0}
+    MAGES.Recorder.Utilities: {instanceID: 0}
+  executionOrder: {}
+  defineConstraints: []
+  isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
+  platformData:
+  - first:
+      Any: 
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      Editor: Editor
+    second:
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
+  - first:
+      Windows Store Apps: WindowsStoreApps
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.core/Extra/Recorder/Runtime/MAGES.Recorder.Runtime.dll
+  uploadId: 717601

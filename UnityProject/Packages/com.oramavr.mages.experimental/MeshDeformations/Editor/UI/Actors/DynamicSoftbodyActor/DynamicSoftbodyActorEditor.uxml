@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="flex-direction: row;">
+        <ui:VisualElement style="background-image: url(&apos;project://database/Packages/com.oramavr.mages.experimental/MeshDeformations/Editor/Icons/dynamic-softbody-actor@2x.png?fileID=2800000&amp;guid=d83788a2f42d0924f84dc8bdb8b3cfab&amp;type=3#dynamic-softbody-actor@2x&apos;); -unity-background-scale-mode: scale-to-fit; width: 32px; height: 32px;" />
+        <ui:Label text="Dynamic Softbody Actor" name="title" style="-unity-font-style: bold; font-size: 16px; -unity-text-align: middle-left; flex-grow: 1; margin-left: 5px;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="tool-area" style="align-items: center; justify-content: center; flex-direction: row;">
+        <ui:Label text="Edit Particles" />
+        <ui:Button name="edit-particles" icon-image="project://database/Assets/Scripts/Editor/Icons/edit-particles.png?fileID=2800000&amp;guid=693cad15043784f42842b45b3d129af2&amp;type=3#edit-particles" style="width: 30px; height: 30px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+            <ui:VisualElement name="icon" style="flex-grow: 1; background-image: url(&apos;project://database/Packages/com.oramavr.mages.experimental/MeshDeformations/Editor/Icons/edit-particles@2x.png?fileID=2800000&amp;guid=3e933f82303ad2644927decb1efc0f24&amp;type=3#edit-particles@2x&apos;);" />
+        </ui:Button>
+    </ui:VisualElement>
+    <ui:Label text="Simulation Settings" style="margin-top: 10px; -unity-font-style: bold; font-size: 14px;" />
+    <uie:ObjectField label="Physics World" name="physics-world" tooltip="The physics world in which this actor will be added." />
+    <uie:ObjectField label="Simulation Mesh" name="simulation-mesh" tooltip="The simulation mesh for this actor." />
+    <ui:UnsignedIntegerField label="Layer" name="layer" tooltip="The collision layer." max-length="3" />
+    <ui:Toggle label="Update Kinematic Particles" name="update-kinematic-particles" tooltip="Update the kinematic particles position when object is moved with the Transform tool?" />
+    <ui:Label text="Dynamic Clean up Settings" style="margin-top: 10px; -unity-font-style: bold; font-size: 14px;" />
+    <ui:Toggle label="Remove Residual Distance Constraints" name="remove-residual-distance-constraints" tooltip="Whether any remaining distance constraints that are not edges of volume constraints (tetrahedra) should be removed?" />
+    <ui:Toggle label="Remove Volume Constraints With Limited Neighbors" name="remove-volume-constraints-with-limited-neighbors" tooltip="Whether any remaining distance constraints that are not edges of volume constraints (tetrahedra) should be removed?" />
+    <ui:SliderInt picking-mode="Ignore" label="Minimum Number of Neighbors Before Removal" value="2" high-value="4" name="min-number-of-neihbors-before-removal" show-input-field="true" />
+    <ui:Label text="Render Settings" style="margin-top: 10px; -unity-font-style: bold; font-size: 14px;" />
+    <ui:Toggle label="Smooth Shading" name="smooth-shading" tooltip="Enable smooth shading for the dynamically generated mesh." />
+    <ui:Toggle label="Generate Faces Between Physics Materials" name="generate-faces-in-physics-material-boundaries" tooltip="Generate faces in physics materials boundaries. Useful when some materials are transparent and you want materials that are inside of them to be visible." />
+    <ui:Button text="Import UV Map from Existing Mesh" parse-escape-sequences="true" display-tooltip-when-elided="true" name="import-uv-map" />
+</ui:UXML>

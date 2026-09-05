@@ -1,0 +1,22 @@
+{
+    "name": "MAGES.Drivers.XR.Runtime",
+    "rootNamespace": "MAGES.Drivers.XR",
+    "references": [
+        "Unity.XR.Management",
+        "Unity.XR.CoreUtils",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.Hub.Runtime.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "MAGES_XR_MANAGEMENT"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.CollisionSound.Editor</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.CollisionSound.Editor.CollisionSoundObjectEditor">
+            <summary>
+            Custom property drawer for CollisionSoundObject component.
+            </summary>
+        </member>
+        <member name="M:MAGES.CollisionSound.Editor.CollisionSoundObjectEditor.CreateInspectorGUI">
+            <summary>
+            Creates the VisualElement for the Inspector of <see cref="!:Grabbable"/> component.
+            </summary>
+            <returns>The inspector's VisualElement.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using MAGES.Recorder;
+using UnityEngine;
+
+public class #SCRIPTNAME# : ICaptor
+{
+    /// <summary>
+    /// Gets a value indicating whether the captor needs to be polled.
+    /// </summary>
+    public bool IsPolling => true;
+
+    /// <summary>
+    /// Initializes this captor.
+    /// </summary>
+    public void Init()
+    {
+    }
+
+    /// <summary>
+    /// Polls the captor for new data.
+    /// </summary>
+    /// <param name="timestamp">The timestamp.</param>
+    /// <remarks>
+    /// This method will only be called if <see cref="IsPolling"/> is true.
+    /// </remarks>
+    public void Poll(double timestamp)
+    {
+    }
+}

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 36e3bdcd851f73e4883c84eb7f7c0dd5
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.experimental/MeshDeformations/Runtime/Assets/NeedleDriving/NeedleDrivingLow.stl
+  uploadId: 717601

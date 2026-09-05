@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row; padding-bottom: 10px; background-color: rgb(89, 89, 89); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; padding-top: 10px; margin-top: 10px; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-left: 8px; padding-right: 8px;">
+        <ui:VisualElement style="flex-grow: 1; flex-direction: column;">
+            <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+                <ui:Label tabindex="-1" text="Key" parse-escape-sequences="true" display-tooltip-when-elided="true" style="min-width: 55px; max-width: 55px;" />
+                <ui:TextField picking-mode="Ignore" value="New key" name="Token" style="flex-grow: 1; flex-shrink: 1;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+                <ui:Label tabindex="-1" text="Category" parse-escape-sequences="true" display-tooltip-when-elided="true" style="min-width: 50px; max-width: 55px;" />
+                <ui:TextField picking-mode="Ignore" value="New category" name="Category" style="flex-grow: 1; flex-shrink: 1;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Translations" style="flex-grow: 1; flex-direction: column;" />
+            <ui:Label tabindex="-1" text="No languages are added, add more from the list above" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NoLanguages" style="display: none; -unity-font-style: bold-and-italic; color: rgb(255, 0, 0); padding-top: 10px; padding-bottom: 5px; padding-left: 2px;" />
+        </ui:VisualElement>
+        <MAGES.Editor.CloseButton name="RemoveButton" tooltip="Removes the key and its translations from the list" />
+    </ui:VisualElement>
+</ui:UXML>

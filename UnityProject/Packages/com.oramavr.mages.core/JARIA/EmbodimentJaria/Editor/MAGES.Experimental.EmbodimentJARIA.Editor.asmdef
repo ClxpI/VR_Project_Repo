@@ -1,0 +1,21 @@
+{
+    "name": "MAGES.Experimental.EmbodimentJARIA.Editor",
+    "rootNamespace": "",
+    "references": [
+        "MAGES.Experimental.EmbodimentJARIA.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.Hub.Runtime.dll",
+        "MAGES.Hub.Editor.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,33 @@
+{
+    "name": "MAGES.DeviceManager.Runtime",
+    "rootNamespace": "MAGES.DeviceManager",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:ba171b3dd2a51234ab864770f99741a5",
+        "GUID:e40ba710768534012815d3193fa296cb",
+        "GUID:28c5e819ece8a0746abb16dc5aa91f44",
+        "GUID:a9420e37d7990b54abdef6688edbe313"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.Hub.Runtime.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.management",
+            "expression": "",
+            "define": "XR_MANAGEMENT"
+        },
+        {
+            "name": "com.unity.xr.arfoundation",
+            "expression": "",
+            "define": "AR_FOUNDATION"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="flex-direction: row;">
+        <ui:VisualElement style="background-image: url(&apos;project://database/Packages/com.oramavr.mages.experimental/MeshDeformations/Editor/Icons/rope-actor@2x.png?fileID=2800000&amp;guid=314fd0fff4f471045ba521912389a2e0&amp;type=3#rope-actor@2x&apos;); -unity-background-scale-mode: scale-to-fit; width: 32px; height: 32px;" />
+        <ui:Label text="Rope Actor" name="title" style="-unity-font-style: bold; font-size: 16px; -unity-text-align: middle-left; flex-grow: 1; margin-left: 5px;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="tool-area" style="align-items: center; justify-content: center; flex-direction: row;">
+        <ui:Label text="Edit Particles" />
+        <ui:Button name="edit-particles" icon-image="project://database/Assets/Scripts/Editor/Icons/edit-particles.png?fileID=2800000&amp;guid=693cad15043784f42842b45b3d129af2&amp;type=3#edit-particles" style="width: 30px; height: 30px; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+            <ui:VisualElement name="icon" style="flex-grow: 1; background-image: url(&apos;project://database/Packages/com.oramavr.mages.experimental/MeshDeformations/Editor/Icons/edit-particles@2x.png?fileID=2800000&amp;guid=3e933f82303ad2644927decb1efc0f24&amp;type=3#edit-particles@2x&apos;);" />
+        </ui:Button>
+    </ui:VisualElement>
+    <ui:Label text="Simulation Settings" style="margin-top: 10px; -unity-font-style: bold; font-size: 14px;" />
+    <uie:ObjectField label="Physics World" name="physics-world" tooltip="The physics world in which this actor will be added." />
+    <ui:FloatField label="Length" value="0.5" name="length" />
+    <ui:FloatField label="Bending Compliance" value="0.001" name="bending-compliance" />
+    <ui:Toggle label="Breakable" name="breakable" />
+    <ui:FloatField label="Break Force" value="1000" name="break-force" />
+    <ui:Toggle label="Self Collision" name="self-collision" tooltip=" Can this object be used for cutting other obejcts?" />
+    <ui:UnsignedIntegerField label="Layer" name="layer" tooltip="The collision layer." max-length="3" />
+    <ui:Toggle label="Update Kinematic Particles" name="update-kinematic-particles" />
+    <uie:PropertyField name="on-break" />
+</ui:UXML>

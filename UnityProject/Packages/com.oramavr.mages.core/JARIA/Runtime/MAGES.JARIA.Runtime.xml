@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.JARIA.Runtime</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.JARIA.JariaRequest">
+            <summary>
+            Class to handle JARIA request.
+            </summary>
+        </member>
+        <member name="P:MAGES.JARIA.JariaRequest.OnResponseReceived">
+            <summary>
+            Gets or sets functions to be called when the response is received from JARIA.
+            </summary>
+        </member>
+        <member name="M:MAGES.JARIA.JariaRequest.PrepareRequest(System.String,MAGES.UserAuthenticationModule,System.Collections.Generic.Dictionary{System.Object,System.Object})">
+            <summary>
+            Prepares the request to JARIA.
+            </summary>
+            <param name="input">User input.</param>
+            <param name="uam"> the user authentication module.</param>
+            <param name="additionalParamas">Additional request parameters.</param>
+            <returns>Return an http response.</returns>
+        </member>
+        <member name="M:MAGES.JARIA.JariaRequest.HandleJsonResponseAsync(System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Handles the JSON response from JARIA.
+            </summary>
+            <param name="response">The response.</param>
+            <returns>A dictionary.</returns>
+        </member>
+    </members>
+</doc>

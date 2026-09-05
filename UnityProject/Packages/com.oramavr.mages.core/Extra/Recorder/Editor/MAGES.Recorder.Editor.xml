@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.Recorder.Editor</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.Recorder.Editor.CloudEditor">
+            <summary>
+            The editor for the cloud.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Editor.CloudEditor.Open">
+            <summary>
+            Open the cloud explorer.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.Editor.EventPacketPropertyDrawer">
+            <summary>
+            Custom property drawer for event packets.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Editor.EventPacketPropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Recorder.Editor.PacketExplorer">
+            <summary>
+            The packet explorer window.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Editor.PacketExplorer.OpenWindow">
+            <summary>
+            Open the packet explorer window.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Editor.PacketExplorer.CreateGUI">
+            <summary>
+            Create the GUI.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.Editor.PositionChangeEventPropertyDrawer">
+            <summary>
+            Property drawer for <see cref="T:MAGES.Recorder.PositionChangeEvent"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Editor.PositionChangeEventPropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Recorder.Editor.RecorderEditor">
+            <summary>
+            The recorder editor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Editor.RecorderEditor.CreateEventScript">
+            <summary>
+            Create a new event script.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Editor.RecorderEditor.OpenDestinationFolder">
+            <summary>
+            Open the destination folder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Editor.RecorderEditor.CreateInterpreterScript">
+            <summary>
+            Create a new interpreter script.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Editor.RecorderEditor.CreateCaptorScript">
+            <summary>
+            Create a new captor script.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Editor.RecorderEditor.OnInspectorGUI">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Recorder.Editor.RotationChangeEventPropertyDrawer">
+            <summary>
+            Property drawer for <see cref="T:MAGES.Recorder.RotationChangeEvent"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Editor.RotationChangeEventPropertyDrawer.CreatePropertyGUI(UnityEditor.SerializedProperty)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

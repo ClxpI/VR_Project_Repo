@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a2011143c21757145b51d184cc654a9f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.core/JARIA/EmbodimentJaria/Runtime/PreservationToken.cs
+  uploadId: 717601

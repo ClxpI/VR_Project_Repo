@@ -1,0 +1,19 @@
+{
+    "name": "MAGES.Experimental.EmbodimentJARIA.Runtime",
+    "rootNamespace": "MAGES.Experimental.EmbodimentJARIA",
+    "references": [
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.JARIA.Runtime.dll",
+        "MAGES.Hub.Runtime.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

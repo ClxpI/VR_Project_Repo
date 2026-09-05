@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -742819698, guid: 4ca934caed7945ae80bd238c0ecdb38f, type: 3}
+  m_Name: PlasticSmall
+  m_EditorClassIdentifier: 
+  materialSoundVariations:
+  - materialSounds:
+    - {fileID: 8300000, guid: 659d1c21e4fa3594f9e46a1b620e4e62, type: 3}
+    - {fileID: 8300000, guid: 7dabe668268dfdf468fbf3658f21a080, type: 3}
+  - materialSounds:
+    - {fileID: 8300000, guid: 371e5d760a1f8c8459bbfed8532ac540, type: 3}
+    - {fileID: 8300000, guid: b2bacadca37a33e4588d446fe7d3fc5d, type: 3}

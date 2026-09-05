@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.CollisionSound.Runtime</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.CollisionSound.CollisionSoundMaterial">
+            <summary>
+            A class conatining information regarding a material and its corresponding sound when colliding.
+            </summary>
+        </member>
+        <member name="P:MAGES.CollisionSound.CollisionSoundMaterial.MaterialSoundVariations">
+            <summary>
+            Gets or sets the list containing all the variations of the material sound.
+            </summary>
+        </member>
+        <member name="M:MAGES.CollisionSound.CollisionSoundMaterial.GetRandomVariation">
+            <summary>
+            Randomly chooses one of the sound variations for that collision material.
+            </summary>
+            <returns>The list containing all the AudioClips regarding that variation.</returns>
+        </member>
+        <member name="T:MAGES.CollisionSound.CollisionSoundMaterial.CollisionSoundMaterialClipList">
+            <summary>
+            A class containing a list of Audio Clips that correspond to a single material sound variation.
+            </summary>
+        </member>
+        <member name="P:MAGES.CollisionSound.CollisionSoundMaterial.CollisionSoundMaterialClipList.MaterialSounds">
+            <summary>
+            Gets or sets the list containing all the material Audio Clips in ascending order based on strength.
+            </summary>
+        </member>
+        <member name="T:MAGES.CollisionSound.CollisionSoundModule">
+            <summary>
+            The root module for the Collision Sound Framework.
+            </summary>
+        </member>
+        <member name="P:MAGES.CollisionSound.CollisionSoundModule.PitchModulationEnabled">
+            <summary>
+            Gets a value indicating whether the pitch randomization of the collision sounds is enabled.
+            </summary>
+        </member>
+        <member name="P:MAGES.CollisionSound.CollisionSoundModule.PitchModulationRange">
+            <summary>
+            Gets the range of pitch of the collision sounds.
+            </summary>
+        </member>
+        <member name="P:MAGES.CollisionSound.CollisionSoundModule.MinCollisionVolume">
+            <summary>
+            Gets the minimum volume below which sounds will not play.
+            </summary>
+        </member>
+        <member name="P:MAGES.CollisionSound.CollisionSoundModule.PlayDelay">
+            <summary>
+            Gets the minimum time in seconds between sound per object.
+            </summary>
+        </member>
+        <member name="M:MAGES.CollisionSound.CollisionSoundModule.Shutdown">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.CollisionSound.CollisionSoundModule.Startup">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.CollisionSound.CollisionSoundModule.GetAudioSource">
+            <summary>
+            Request an audioSource from the audiosource pool.
+            </summary>
+            <returns>The requested audio source.</returns>
+        </member>
+        <member name="M:MAGES.CollisionSound.CollisionSoundModule.ReturnAudioSource(UnityEngine.AudioSource)">
+            <summary>
+            Returns an audio source back to the pool.
+            </summary>
+            <param name="audioSource">The audio source.</param>
+        </member>
+        <member name="T:MAGES.CollisionSound.CollisionSoundObject">
+            <summary>
+            A class representing an object that when wolliding plays a specific sound corresponding to its material.
+            </summary>
+        </member>
+        <member name="P:MAGES.CollisionSound.CollisionSoundObject.CollisionSoundMaterial">
+            <summary>
+            Gets or sets the name of the corresponding collision sound material.
+            </summary>
+        </member>
+        <member name="P:MAGES.CollisionSound.CollisionSoundObject.AutomaticOverride">
+            <summary>
+            Gets or sets a value indicating whether the object's attributes must be set manually.
+            </summary>
+        </member>
+        <member name="T:MAGES.CollisionSound.IgnoreSoundObject">
+            <summary>
+            A class responsible for ignoring the sound collisions that play on the gameobject it belongs to.
+            </summary>
+        </member>
+        <member name="T:MAGES.CollisionSound.IgnoreSoundSubModule">
+            <summary>
+            A SubModule of CollisionSoundModule that contains all the gameobjects that ignore sounds.
+            </summary>
+        </member>
+        <member name="P:MAGES.CollisionSound.IgnoreSoundSubModule.IgnoreSoundObjects">
+            <summary>
+            Gets or sets the hashset containing all the objects that will ignore collision sounds.
+            </summary>
+        </member>
+        <member name="M:MAGES.CollisionSound.IgnoreSoundSubModule.Shutdown">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.CollisionSound.IgnoreSoundSubModule.Startup">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

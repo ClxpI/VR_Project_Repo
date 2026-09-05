@@ -1,0 +1,57 @@
+namespace MAGES.Recorder
+{
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+    public class #SCRIPTNAME# : IInterpreter
+    {
+        /// <summary>
+        /// Gets a value indicating whether the interpreter is enabled and should receive update events.
+        /// </summary>
+        public bool Enabled => true;
+
+        /// <summary>
+        /// Initializes this instance.
+        /// </summary>
+        public void Initialize()
+        {
+        }
+
+        /// <summary>
+        /// Deinitializes this instance.
+        /// </summary>
+        public void Deinitialize()
+        {
+        }
+
+        /// <summary>
+        /// Interprets the event.
+        /// </summary>
+        /// <param name="evt">The event.</param>
+        public void Interpret(ICapturedEvent evt)
+        {
+        }
+
+        /// <summary>
+        /// Called at the end of the physics update.
+        /// </summary>
+        public void FixedUpdate()
+        {
+        }
+
+        /// <summary>
+        /// Called at the start of the update loop.
+        /// </summary>
+        public void LateUpdate()
+        {
+        }
+
+        /// <summary>
+        /// Called at the end of the update loop.
+        /// </summary>
+        public void Update()
+        {
+        }
+    }
+}

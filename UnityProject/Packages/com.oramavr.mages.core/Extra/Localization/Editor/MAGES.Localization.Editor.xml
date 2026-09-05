@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.Localization.Editor</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.Localization.Editor.AudioEntriesWizard">
+            <summary>
+            Editor window that allows to add audio entries to prefabs.
+            </summary>
+        </member>
+        <member name="M:MAGES.Localization.Editor.AudioEntriesWizard.OpenWindow">
+            <summary>
+            Opens the window.
+            </summary>
+        </member>
+        <member name="M:MAGES.Localization.Editor.AudioEntriesWizard.CreateGUI">
+            <inheritdoc cref="T:UnityEditor.EditorWindow"/>
+        </member>
+        <member name="T:MAGES.Localization.Editor.AudioEntriesWizard.ListElement">
+            <summary>
+            A class that a prefab and two buttons to add or clean the prefab.
+            </summary>
+        </member>
+        <member name="M:MAGES.Localization.Editor.AudioEntriesWizard.ListElement.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Localization.Editor.AudioEntriesWizard.ListElement"/> class.
+            </summary>
+        </member>
+        <member name="P:MAGES.Localization.Editor.AudioEntriesWizard.ListElement.Prefab">
+            <summary>
+            Gets or sets the visual element that holds the prefab.
+            </summary>
+        </member>
+        <member name="P:MAGES.Localization.Editor.AudioEntriesWizard.ListElement.AddButton">
+            <summary>
+            Gets or sets the button that adds the component to the prefab.
+            </summary>
+        </member>
+        <member name="P:MAGES.Localization.Editor.AudioEntriesWizard.ListElement.RemoveButton">
+            <summary>
+            Gets or sets the button that cleans the component from the prefab.
+            </summary>
+        </member>
+        <member name="T:MAGES.Localization.Editor.MAGESLocalizationEditor">
+            <summary>
+            The editor for the <see cref="T:MAGES.Localization.MAGESLocalization"/> component.
+            </summary>
+        </member>
+        <member name="M:MAGES.Localization.Editor.MAGESLocalizationEditor.CreateInspectorGUI">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Localization.Editor.TextEntriesWizard">
+            <summary>
+            Editor window that allows to add text entries to prefabs.
+            </summary>
+        </member>
+        <member name="M:MAGES.Localization.Editor.TextEntriesWizard.OpenWindow">
+            <summary>
+            Opens the window.
+            </summary>
+        </member>
+        <member name="M:MAGES.Localization.Editor.TextEntriesWizard.CreateGUI">
+            <inheritdoc cref="T:UnityEditor.EditorWindow"/>
+        </member>
+        <member name="T:MAGES.Localization.Editor.TextEntriesWizard.ListElement">
+            <summary>
+            A class that a prefab and two buttons to add or clean the prefab.
+            </summary>
+        </member>
+        <member name="M:MAGES.Localization.Editor.TextEntriesWizard.ListElement.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Localization.Editor.TextEntriesWizard.ListElement"/> class.
+            </summary>
+            <param name="prefabs">The list of prefabs.</param>
+        </member>
+        <member name="P:MAGES.Localization.Editor.TextEntriesWizard.ListElement.Prefab">
+            <summary>
+            Gets or sets the visual element that holds the prefab.
+            </summary>
+        </member>
+        <member name="P:MAGES.Localization.Editor.TextEntriesWizard.ListElement.AddButton">
+            <summary>
+            Gets or sets the button that adds the component to the prefab.
+            </summary>
+        </member>
+        <member name="P:MAGES.Localization.Editor.TextEntriesWizard.ListElement.RemoveButton">
+            <summary>
+            Gets or sets the button that cleans the component from the prefab.
+            </summary>
+        </member>
+        <member name="M:MAGES.Localization.Editor.TextEntriesWizard.ListElement.AttachAddButtonEvent">
+            <summary>
+            Attaches the event to the add button.
+            </summary>
+            <param name="prefab"> The prefab to attach the text swap script. </param>
+        </member>
+        <member name="M:MAGES.Localization.Editor.TextEntriesWizard.ListElement.AttachRemoveButtonEvent">
+            <summary>
+            Attaches the event to the remove button.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,110 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="flex-grow: 1; justify-content: flex-start; align-items: stretch;">
+        <ui:VisualElement name="content" style="flex-grow: 1;">
+            <uie:Toolbar name="toolbar">
+                <uie:ToolbarButton text="Refresh" parse-escape-sequences="true" display-tooltip-when-elided="true" name="refresh-button" />
+                <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" text="Product" style="padding-top: 0; padding-right: 0; padding-bottom: 4px; padding-left: 2px; margin-top: 0; margin-right: 4px; margin-bottom: 0; margin-left: 0; color: rgb(255, 255, 255); -unity-text-align: lower-left; -unity-font-style: bold;" />
+                <ui:TextField picking-mode="Ignore" is-delayed="true" name="in-product-code" />
+                <uie:ToolbarSpacer style="flex-grow: 1;" />
+                <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="selection-status" text="Selected: None" style="color: rgb(255, 255, 255); -unity-text-align: lower-right; padding-top: 0; padding-right: 5px; padding-bottom: 4px; padding-left: 0; flex-grow: 1; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+                <uie:ToolbarButton text="Upload" parse-escape-sequences="true" display-tooltip-when-elided="true" name="upload-recording" />
+                <uie:ToolbarButton text="Download" parse-escape-sequences="true" display-tooltip-when-elided="true" name="download-recording" />
+                <uie:ToolbarButton text="Edit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="edit-recording" />
+                <uie:ToolbarButton text="Remove" parse-escape-sequences="true" display-tooltip-when-elided="true" name="remove-recording" />
+            </uie:Toolbar>
+            <ui:VisualElement style="flex-grow: 1;">
+                <ui:VisualElement name="SPV" style="flex-grow: 1; flex-direction: row; border-top-width: 2px; border-top-color: rgb(0, 0, 0);">
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: column;">
+                        <ui:VisualElement style="flex-grow: 0; background-color: rgb(0, 0, 0);">
+                            <ui:Label tabindex="-1" text="Recordings" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold; color: rgb(255, 255, 255); width: 200px; flex-grow: 0; align-self: stretch;" />
+                        </ui:VisualElement>
+                        <ui:ListView reorderable="false" name="remote-recordings" header-title="Remote Recordings" show-foldout-header="true" show-border="true" show-bound-collection-size="false" selection-type="Multiple" style="flex-grow: 0;" />
+                        <ui:ListView reorderable="false" name="local-recordings" show-foldout-header="true" header-title="Local Recordings" show-border="true" show-bound-collection-size="false" selection-type="Multiple" style="flex-grow: 0;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 0; border-left-width: 0; border-left-color: rgb(0, 0, 0);">
+                        <ui:VisualElement style="flex-grow: 0; background-color: rgb(0, 0, 0);">
+                            <ui:Label tabindex="-1" text="Details" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold; color: rgb(255, 255, 255); width: 200px; flex-grow: 0; align-self: stretch;" />
+                        </ui:VisualElement>
+                        <ui:ScrollView style="flex-grow: 1;">
+                            <ui:TextField picking-mode="Ignore" label="Title" name="rc-title" readonly="true" style="flex-grow: 1;" />
+                            <ui:TextField picking-mode="Ignore" label="ID" name="rc-id" readonly="true" style="flex-grow: 1;" />
+                            <ui:TextField picking-mode="Ignore" label="Username" name="rc-user" readonly="true" style="flex-grow: 1;" />
+                            <ui:TextField picking-mode="Ignore" label="Created" name="rc-date" readonly="true" style="flex-grow: 1;" />
+                            <ui:TextField picking-mode="Ignore" label="Tenant" name="rc-tenant" readonly="true" style="flex-grow: 1;" />
+                            <ui:Toggle label="Is Instructor" name="rc-instructor" style="display: flex; visibility: visible; overflow: hidden; opacity: 1;" />
+                            <ui:TextField picking-mode="Ignore" label="Duration" name="rc-duration" readonly="true" style="flex-grow: 1;" />
+                            <ui:TextField picking-mode="Ignore" label="Path" name="rc-path" />
+                        </ui:ScrollView>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="status-bar" style="flex-grow: 0; background-color: rgb(0, 0, 0); align-self: auto; justify-content: flex-end;">
+                <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="status" style="color: rgb(255, 255, 255);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="overlay" style="flex-grow: 0; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.37); align-items: center; justify-content: flex-start; align-self: auto; display: flex;">
+        <ui:VisualElement name="apply" style="flex-grow: 1; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; max-width: 500px; min-width: 500px; flex-direction: column; align-items: stretch; justify-content: flex-start; display: none; visibility: visible;">
+            <ui:VisualElement style="flex-grow: 0; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background-color: rgb(67, 67, 67);">
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row;">
+                    <ui:Label tabindex="-1" text="Delete Recording(s)" parse-escape-sequences="true" display-tooltip-when-elided="true" name="apply-title" style="flex-grow: 1;" />
+                    <MAGES.Editor.CloseButton name="apply-close" />
+                </ui:VisualElement>
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="apply-message" style="white-space: normal;" />
+                <ui:VisualElement style="flex-grow: 1; height: 50px;" />
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row-reverse; align-self: auto;">
+                    <ui:Button text="Confirm" parse-escape-sequences="true" display-tooltip-when-elided="true" name="apply-confirm" style="flex-shrink: 1;" />
+                    <ui:VisualElement style="flex-grow: 1;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="edit" style="flex-grow: 1; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; max-width: 500px; min-width: 500px; flex-direction: column; align-items: stretch; justify-content: flex-start; display: none;">
+            <ui:VisualElement style="flex-grow: 0; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background-color: rgb(67, 67, 67);">
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row;">
+                    <ui:Label tabindex="-1" text="Edit Recording" parse-escape-sequences="true" display-tooltip-when-elided="true" style="flex-grow: 1;" />
+                    <MAGES.Editor.CloseButton name="edit-close" />
+                </ui:VisualElement>
+                <ui:TextField picking-mode="Ignore" label="Title" name="edit-rc-title" readonly="false" style="flex-grow: 1;" />
+                <ui:TextField picking-mode="Ignore" label="ID" name="edit-rc-id" readonly="true" style="flex-grow: 1;" />
+                <ui:TextField picking-mode="Ignore" label="Username" name="edit-rc-user" readonly="false" style="flex-grow: 1;" />
+                <ui:TextField picking-mode="Ignore" label="Created" name="edit-rc-date" readonly="false" style="flex-grow: 1;" />
+                <ui:TextField picking-mode="Ignore" label="Tenant" name="edit-rc-tenant" readonly="false" style="flex-grow: 1;" />
+                <ui:Toggle label="Is Instructor" name="edit-rc-instructor" style="display: flex; visibility: visible; overflow: hidden; opacity: 1;" />
+                <ui:TextField picking-mode="Ignore" label="Duration" name="edit-rc-duration" readonly="false" style="flex-grow: 1;" />
+                <ui:VisualElement style="flex-grow: 1; height: 50px;" />
+                <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="edit-message" style="white-space: normal;" />
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row-reverse; align-self: auto;">
+                    <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="edit-confirm" style="flex-shrink: 1;" />
+                    <ui:VisualElement style="flex-grow: 1;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="upload" style="flex-grow: 1; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; max-width: 500px; min-width: 500px; flex-direction: column; align-items: stretch; justify-content: flex-start; display: flex;">
+            <ui:VisualElement style="flex-grow: 0; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background-color: rgb(67, 67, 67);">
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row;">
+                    <ui:Label tabindex="-1" text="Upload Recording" parse-escape-sequences="true" display-tooltip-when-elided="true" style="flex-grow: 1;" />
+                    <MAGES.Editor.CloseButton name="upload-close" />
+                </ui:VisualElement>
+                <ui:TextField picking-mode="Ignore" label="Title" name="upload-rc-title" readonly="false" style="flex-grow: 1;" />
+                <ui:TextField picking-mode="Ignore" label="Product" name="upload-rc-product" readonly="false" style="flex-grow: 1;" />
+                <ui:TextField picking-mode="Ignore" label="Username" name="upload-rc-user" readonly="false" style="flex-grow: 1;" />
+                <ui:TextField picking-mode="Ignore" label="Created" name="upload-rc-date" readonly="false" style="flex-grow: 1;" />
+                <ui:TextField picking-mode="Ignore" label="Tenant" name="upload-rc-tenant" readonly="false" style="flex-grow: 1;" />
+                <ui:Toggle label="Is Instructor" name="upload-rc-instructor" style="display: flex; visibility: visible; overflow: hidden; opacity: 1;" />
+                <ui:TextField picking-mode="Ignore" label="Duration" name="upload-rc-duration" readonly="false" style="flex-grow: 1;" />
+                <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+                    <ui:VisualElement style="flex-grow: 1; overflow: hidden;">
+                        <ui:TextField picking-mode="Ignore" label="File" name="upload-file" readonly="true" max-length="-1" hide-mobile-input="false" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:Button text="Choose" parse-escape-sequences="true" display-tooltip-when-elided="true" name="upload-file-choose" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; height: 50px;" />
+                <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="upload-message" style="white-space: normal;" />
+                <ui:VisualElement style="flex-grow: 0; flex-direction: row-reverse; align-self: auto;">
+                    <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="upload-confirm" style="flex-shrink: 1;" />
+                    <ui:VisualElement style="flex-grow: 1;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

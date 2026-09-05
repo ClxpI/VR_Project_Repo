@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="root" style="flex-grow: 1;">
+        <ui:TextField picking-mode="Ignore" label="Agent ID" name="AgentID" style="max-height: 50px; flex-grow: 1; flex-shrink: 0;" />
+        <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: flex-start; align-self: stretch; flex-direction: row;">
+            <ui:DropdownField label="Embodiment Character" name="EmbodimentCharacter" index="0" choices="Scene,Prefab" style="width: 60%; flex-wrap: nowrap; flex-direction: row;" />
+            <uie:ObjectField name="CharacterInputPrefab" style="width: 40%; justify-content: space-around; flex-direction: column-reverse; align-self: flex-end; align-items: center;" />
+            <ui:TextField name="CharacterInputScene" picking-mode="Ignore" value="Object Name" style="width: 40%; opacity: 1; flex-direction: row; align-items: center; justify-content: space-around; align-self: center; position: relative; top: auto; left: -40%;" />
+        </ui:VisualElement>
+        <uie:ObjectField label="Interaction Component" name="InteractionComponent" />
+        <uie:ObjectField label="Agent Output Component" name="AgentOutputComponent" />
+        <ui:TextField picking-mode="Ignore" label="Speech Handler Key" name="SpeechHandlerKey" />
+        <ui:TextField picking-mode="Ignore" label="Text Handler Key" name="TextHandlerKey" />
+        <ui:TextField picking-mode="Ignore" label="Handlers Region" name="TextSpeechHandlersRegion" />
+        <ui:TextField picking-mode="Ignore" label="Voice ID" name="voiceID" />
+        <ui:TextField picking-mode="Ignore" label="Language ID" name="languageCode" />
+        <ui:TextField picking-mode="Ignore" label="Custom Endpoint" name="endpointID" />
+        <ui:Foldout text="Agent Details" name="Config" style="align-items: stretch; align-self: stretch; width: 100%;" />
+        <ui:Button text="Get Agent Details" parse-escape-sequences="true" display-tooltip-when-elided="true" name="GetAgentButton" style="max-width: none; align-self: center; flex-direction: column; width: 100%; align-items: stretch; justify-content: space-around; flex-shrink: 1; position: relative;" />
+    </ui:VisualElement>
+</ui:UXML>

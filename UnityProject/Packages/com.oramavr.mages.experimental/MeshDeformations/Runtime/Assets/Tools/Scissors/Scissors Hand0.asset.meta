@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9f9980fd9299b4d4d90f2f73b4d86860
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.experimental/MeshDeformations/Runtime/Assets/Tools/Scissors/Scissors
+    Hand0.asset
+  uploadId: 717601

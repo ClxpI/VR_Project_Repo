@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f1a44b725b36796499b1e63e733c99b7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.core/DeviceManager/Resources/MAGESDeviceManagerV2.asset
+  uploadId: 717601

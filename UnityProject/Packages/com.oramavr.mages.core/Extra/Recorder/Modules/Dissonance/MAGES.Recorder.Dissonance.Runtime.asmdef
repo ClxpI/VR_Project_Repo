@@ -1,0 +1,21 @@
+{
+    "name": "MAGES.Recorder.Dissonance.Runtime",
+    "rootNamespace": "MAGES.Recorder.Dissonance",
+    "references": [
+        "DissonanceVoip"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.Hub.Runtime.dll",
+        "MAGES.Recorder.Runtime.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "MAGES_DISSONANCE"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

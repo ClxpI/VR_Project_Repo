@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: b24c477a4913dde488e6336d2f421879
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.experimental/MeshDeformations/Editor/Scripts/TetrahedralMeshEditor.cs
+  uploadId: 717601

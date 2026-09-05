@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f58a30e4fc8bd7d4597ad5df5abcba7a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.experimental/MeshDeformations/Runtime/Assets/Vessel
+    Energy Dissection/Vessel.mat
+  uploadId: 717601

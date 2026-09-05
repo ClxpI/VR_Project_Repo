@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d7ae45c6a9009884da503605df6a33ea
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.experimental/MeshDeformations/Runtime/Assets/NeedleDriving/Forceps/Forceps
+    Hand0.asset
+  uploadId: 717601

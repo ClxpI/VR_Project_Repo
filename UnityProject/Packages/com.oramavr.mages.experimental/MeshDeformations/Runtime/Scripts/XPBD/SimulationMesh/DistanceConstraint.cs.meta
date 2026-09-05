@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 19ecc9f26227a0945bde733726b3d126
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.experimental/MeshDeformations/Runtime/Scripts/XPBD/SimulationMesh/DistanceConstraint.cs
+  uploadId: 717601

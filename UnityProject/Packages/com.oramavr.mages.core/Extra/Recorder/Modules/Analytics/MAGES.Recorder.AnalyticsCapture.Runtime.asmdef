@@ -1,0 +1,21 @@
+{
+    "name": "MAGES.Recorder.AnalyticsCapture.Runtime",
+    "rootNamespace": "MAGES.Recorder.AnalyticsCapture",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.Hub.Runtime.dll",
+        "MAGES.Recorder.Runtime.dll",
+        "MAGES.Analytics.Runtime.dll",
+        "MAGES.UIs.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "MAGES_ANALYTICS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

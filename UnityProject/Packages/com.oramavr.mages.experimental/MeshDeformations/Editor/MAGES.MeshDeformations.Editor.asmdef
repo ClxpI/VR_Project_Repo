@@ -1,0 +1,22 @@
+{
+    "name": "MAGES.MeshDeformations.Editor",
+    "rootNamespace": "MAGES.MeshDeformations.Editor",
+    "references": [
+        "GUID:def69d3d985bfd34496e68bfd84cd94a",
+        "GUID:d8b63aba1907145bea998dd612889d6b"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "MAGES.Hub.Runtime.dll",
+        "MAGES.Hub.Editor.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

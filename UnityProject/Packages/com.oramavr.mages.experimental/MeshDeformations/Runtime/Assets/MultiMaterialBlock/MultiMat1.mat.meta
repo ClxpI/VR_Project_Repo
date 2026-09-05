@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b8ce989d2d4009d44b186c7ef97cbd3f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.experimental/MeshDeformations/Runtime/Assets/MultiMaterialBlock/MultiMat1.mat
+  uploadId: 717601

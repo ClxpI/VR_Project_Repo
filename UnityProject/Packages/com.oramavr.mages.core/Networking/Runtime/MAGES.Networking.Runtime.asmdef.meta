@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3ed10944100fdbc41be9800f288b213a
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 277259
+  packageName: MAGES SDK - Create Cutting-Edge Medical XR Simulations
+  packageVersion: 5.2.3
+  assetPath: Packages/com.oramavr.mages.core/Networking/Runtime/MAGES.Networking.Runtime.asmdef
+  uploadId: 717601

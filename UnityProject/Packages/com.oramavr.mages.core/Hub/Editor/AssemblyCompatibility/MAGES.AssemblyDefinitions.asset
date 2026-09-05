@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 783578436, guid: cff90053ebc68c182ffbfe97450b2416, type: 3}
+  m_Name: MAGES.AssemblyDefinitions
+  m_EditorClassIdentifier: 
+  entries:
+  - description: 'Recorder: Enable Dissonance Capture'
+    assemblyName: DissonanceVoip
+    dlls: []
+    definitions:
+    - MAGES_DISSONANCE
+    platformFlags: 127
+  - description: 'Recorder: Enable Analytics Capture'
+    assemblyName: MAGES.Analytics.Runtime
+    dlls: []
+    definitions:
+    - MAGES_ANALYTICS
+    platformFlags: 127
+  - description: 'Hub: Enable Non Web Microphone API'
+    assemblyName: 
+    dlls: []
+    definitions:
+    - MAGES_ENABLE_NON_WEB_MICROPHONE
+    platformFlags: 63
+  - description: 'Hub: Enable Web Microphone API'
+    assemblyName: 
+    dlls: []
+    definitions:
+    - MAGES_ENABLE_WEB_MICROPHONE
+    platformFlags: 64
+  - description: 'JARIA: Microsoft Cognitive Services'
+    assemblyName: 
+    dlls:
+    - Microsoft.CognitiveServices.Speech.core
+    - libMicrosoft.CognitiveServices.Speech.core
+    definitions:
+    - MAGES_MICROSOFT_COGNITIVE_SERVICES
+    platformFlags: -1
+  - description: 'Hub: Enable AR SubModule'
+    assemblyName: Unity.XR.ARFoundation
+    dlls: []
+    definitions:
+    - MAGES_AR_FOUNDATION
+    platformFlags: -1
+  - description: 'Device Manager: Enable XR Driver'
+    assemblyName: Unity.XR.Management
+    dlls: []
+    definitions:
+    - MAGES_XR_MANAGEMENT
+    platformFlags: -1

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.Localization.Runtime</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.Localization.AudioClipLanguageSwap">
+            <summary>
+            Swaps the text of a TextMeshProUGUI component to the current language.
+            </summary>
+        </member>
+        <member name="P:MAGES.Localization.AudioClipLanguageSwap.AudioKey">
+            <summary>
+            Gets or sets the key of the audio clip in the localization system.
+            </summary>
+        </member>
+        <member name="T:MAGES.Localization.MAGESLocalization">
+            <summary>
+            The MAGES Localization system.
+            </summary>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.Startup">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.Shutdown">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.AddTextEntry(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.AddAudioEntry(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.BuildLanguagePacks">
+            <summary>
+            Builds the language packs.
+            </summary>
+            <returns>A dictionary mapping language keys to packs.</returns>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.SetLanguage(System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.GetCurrentLanguage">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.ResolveText(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.ResolveAudio(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.GetTextEntries">
+            <inheritdoc/>
+        </member>
+        <member name="T:MAGES.Localization.MAGESLocalization.LanguagePack">
+            <summary>
+            Represents a language pack.
+            </summary>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.LanguagePack.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Localization.MAGESLocalization.LanguagePack"/> class.
+            </summary>
+            <param name="language">The language key.</param>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.LanguagePack.AddTextEntry(System.String,System.String)">
+            <summary>
+            Adds an entry to the language pack.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.LanguagePack.AddAudioEntry(System.String,UnityEngine.AudioClip)">
+            <summary>
+            Adds an entry to the language pack.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.LanguagePack.TryGetText(System.String,System.String@)">
+            <summary>
+            Tries to get the value of a key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <returns>True on success.</returns>
+        </member>
+        <member name="M:MAGES.Localization.MAGESLocalization.LanguagePack.TryGetAudio(System.String,UnityEngine.AudioClip@)">
+            <summary>
+            Tries to get the value of a key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <returns>True on success.</returns>
+        </member>
+        <member name="T:MAGES.Localization.PreservationToken">
+            <summary>
+            Prevents this assembly from being stripped by the linker.
+            </summary>
+        </member>
+        <member name="T:MAGES.Localization.TextMeshProLanguageSwap">
+            <summary>
+            Swaps the text of a TextMeshProUGUI component to the current language.
+            </summary>
+        </member>
+    </members>
+</doc>

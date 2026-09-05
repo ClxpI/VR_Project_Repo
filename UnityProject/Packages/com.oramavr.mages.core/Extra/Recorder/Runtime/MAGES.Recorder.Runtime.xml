@@ -1,0 +1,3160 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAGES.Recorder.Runtime</name>
+    </assembly>
+    <members>
+        <member name="T:MAGES.Recorder.AudioCapture">
+            <summary>
+            Captures and encodes multiple audio streams.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.AudioCapture.AddStreamByManual(System.Int32,MAGES.Recorder.MicrophoneEvent.SourceCategory,System.String)">
+            <summary>
+            Adds a manual audio stream.
+            </summary>
+            <param name="sampleRate">The sample rate.</param>
+            <param name="category">The source category.</param>
+            <param name="device">The device.</param>
+            <returns>The audio stream.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.AudioCapture.AddStreamByMicrophone">
+            <summary>
+            Adds a new audio stream by microphone.
+            </summary>
+            <returns>The audio stream.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.AudioCapture.AddStreamByAudioSource(UnityEngine.AudioSource)">
+            <summary>
+            Adds a new audio stream by audio source.
+            </summary>
+            <param name="source">The audio source to use.</param>
+            <returns>The audio stream.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.AudioCapture.WriteSamples(System.Single[],System.Int32,System.Int32,System.Int32,System.Int32,MAGES.Recorder.AudioCapture.AudioStream)">
+            <summary>
+            Writes samples to the audio stream.
+            </summary>
+            <param name="data">The samples.</param>
+            <param name="offset">The offset to start writing from.</param>
+            <param name="count">The number of samples to write.</param>
+            <param name="sampleRate">The sample rate of <paramref name="data"/>.</param>
+            <param name="channels">The number of channels.</param>
+            <param name="stream">The audio stream to write the samples to.</param>
+        </member>
+        <member name="M:MAGES.Recorder.AudioCapture.CloseStream(MAGES.Recorder.AudioCapture.AudioStream)">
+            <summary>
+            Closes the audio stream.
+            </summary>
+            <param name="stream">The audio stream to close.</param>
+        </member>
+        <member name="M:MAGES.Recorder.AudioCapture.Init">
+            <summary>
+            Initializes the audio capture.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.AudioCapture.Deinit">
+            <summary>
+            Deinitializes the audio capture.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.AudioCapture.Update">
+            <summary>
+            Updates the audio capture.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.AudioCapture.AudioStream">
+            <summary>
+            Represents an audio stream.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.AudioCapture.AudioStream.AudioStreamType">
+            <summary>
+            Represents the type of audio stream.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.AudioCapture.AudioStream.AudioStreamType.Manual">
+            <summary>
+            Represents a manual audio stream.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.AudioCapture.AudioStream.AudioStreamType.AudioSource">
+            <summary>
+            Represents an audio source.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.AudioCapture.AudioStream.AudioStreamType.Microphone">
+            <summary>
+            Represents a microphone.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.UID">
+            <summary>
+            Gets or sets the UID of the audio stream.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.SampleRate">
+            <summary>
+            Gets or sets the sample rate.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.FileStream">
+            <summary>
+            Gets or sets the file stream.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.Active">
+            <summary>
+            Gets or sets a value indicating whether the stream is active.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.BinaryWriter">
+            <summary>
+            Gets or sets the binary writer.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.Encoder">
+            <summary>
+            Gets or sets the encoder.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.Manual">
+            <summary>
+            Gets or sets the state of the manual audio stream.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.AudioSource">
+            <summary>
+            Gets or sets the state of the audio source.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.Microphone">
+            <summary>
+            Gets or sets the state of the microphone.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.Type">
+            <summary>
+            Gets or sets a value indicating the type of the stream.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.AudioCapture.AudioStream.ManualState">
+            <summary>
+            Represents the state of the manual audio stream.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.ManualState.SourceBuffer">
+            <summary>
+            Gets or sets the source buffer.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.ManualState.IntermediateBuffer">
+            <summary>
+            Gets or sets the intermediate buffer.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.AudioCapture.AudioStream.AudioSourceState">
+            <summary>
+            Represents the state of the audio source.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.AudioSourceState.AudioSource">
+            <summary>
+            Gets or sets the audio source.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.AudioSourceState.Broadcaster">
+            <summary>
+            Gets or sets the audio filter read broadcaster.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.AudioCapture.AudioStream.MicrophoneState">
+            <summary>
+            Represents the state of the microphone.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.MicrophoneState.AudioClip">
+            <summary>
+            Gets or sets the audio clip.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.MicrophoneState.ReadPosition">
+            <summary>
+            Gets or sets the read position.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.MicrophoneState.SelectedDevice">
+            <summary>
+            Gets or sets the selected device.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioCapture.AudioStream.MicrophoneState.BufferLengthSeconds">
+            <summary>
+            Gets or sets the buffer length in seconds.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.AudioFilterReadBroadcaster">
+            <summary>
+            A class that can broadcast audio filter read events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.AudioFilterReadBroadcaster.Callback">
+            <summary>
+            Gets or sets the callback to call when the filter reads audio.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.ClientChangeInterpreter">
+            <summary>
+            An interpreter for position and rotation changes.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ClientChangeInterpreter.Enabled">
+            <summary>
+            Gets a value indicating whether the interpreter is enabled and should receive update events.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.ClientChangeInterpreter.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.ClientChangeInterpreter.Deinitialize">
+            <summary>
+            Deinitializes this instance.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.ClientChangeInterpreter.Interpret(MAGES.Recorder.ICapturedEvent)">
+            <summary>
+            Interprets the event.
+            </summary>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="M:MAGES.Recorder.ClientChangeInterpreter.FixedUpdate">
+            <summary>
+            Called at the end of the physics update.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.ClientChangeInterpreter.LateUpdate">
+            <summary>
+            Called at the start of the update loop.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.ClientChangeInterpreter.Update">
+            <summary>
+            Called at the end of the update loop.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.ClientEnterEvent">
+            <summary>
+            An event created when a client enters the session.
+            </summary>
+            <remarks>
+            This event will always be raised at least once even in single-player mode.
+            </remarks>
+        </member>
+        <member name="M:MAGES.Recorder.ClientEnterEvent.#ctor(System.Int64,System.String,System.Int32,MAGES.Interaction.AvatarData,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.ClientEnterEvent"/> class.
+            </summary>
+            <param name="frameCount">The frame count.</param>
+            <param name="clientName">The client name.</param>
+            <param name="avatarData">The avatar data.</param>
+            <param name="clientNumber">The client number.</param>
+            <param name="captureTime">The capture time.</param>
+        </member>
+        <member name="P:MAGES.Recorder.ClientEnterEvent.CreateTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was created (NOT captured).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ClientEnterEvent.CaptureTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was captured.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ClientEnterEvent.CreateFrame">
+            <summary>
+            Gets the frame the event was captured on.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ClientEnterEvent.ClientName">
+            <summary>
+            Gets the username of the client that entered the session.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ClientEnterEvent.ClientNumber">
+            <summary>
+            Gets the client number of the client that entered the session.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ClientEnterEvent.AvatarData">
+            <summary>
+            Gets the avatar data.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.ClientExitEvent">
+            <summary>
+            An event created when a client exits the session.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.ClientExitEvent.#ctor(System.Int64,System.String,System.Int32,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.ClientExitEvent"/> class.
+            </summary>
+            <param name="frameCount">The frame count.</param>
+            <param name="clientName">The client name.</param>
+            <param name="clientNumber">The client number.</param>
+            <param name="captureTime">The capture time.</param>
+        </member>
+        <member name="P:MAGES.Recorder.ClientExitEvent.CreateTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was created (NOT captured).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ClientExitEvent.CaptureTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was captured.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ClientExitEvent.CreateFrame">
+            <summary>
+            Gets the frame the event was captured on.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ClientExitEvent.ClientName">
+            <summary>
+            Gets the username of the client that entered the session.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ClientExitEvent.ClientNumber">
+            <summary>
+            Gets the client number of the client that entered the session.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.Cloud">
+            <summary>
+            Cloud handler class.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Cloud.#ctor(MAGES.IAuthenticationAPI,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.Cloud"/> class.
+            </summary>
+            <param name="auth">The authentication API to use.</param>
+            <param name="baseUrl">The base URL to use.</param>
+            <param name="product">The product code to use.</param>
+        </member>
+        <member name="M:MAGES.Recorder.Cloud.GetRecordings">
+            <summary>
+            Gets all the recordings.
+            </summary>
+            <returns>A tuple containing a value indicating whether the operation was successful, a message, and an array of recordings.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Cloud.DownloadRecording(System.String,System.String,System.Action{System.Single,System.String},System.Boolean)">
+            <summary>
+            Downloads and unzips a recording.
+            </summary>
+            <param name="recordingId">The recording.</param>
+            <param name="folder">The destination folder.</param>
+            <param name="onUpdate">A callback to update the progress.</param>
+            <param name="unzip">A value indicating whether to unzip the recording.</param>
+            <returns>A tuple containing a value indicating whether the operation was successful, a message, and a string of the first file that was unzipped.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Cloud.UploadRecording(MAGES.Recorder.RecorderModule.Recording,System.Action{System.Single,System.String},System.String,System.Boolean)">
+            <summary>
+            Uploads a recording.
+            </summary>
+            <param name="recording">The recording to upload.</param>
+            <param name="onUpdate">Progress indicator callback.</param>
+            <param name="title">The title of the recording. If left null, '{product} Recording' will be used.</param>
+            <param name="isPublic">A value indicating whether to mark the recording as public.</param>
+            <returns>A tuple containing a boolean that indicates whether the upload process was successful, and a string that contains a more descriptive message.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Cloud.DeleteRecording(MAGES.Recorder.RecorderModule.Recording)">
+            <summary>
+            Deletes a recording.
+            </summary>
+            <param name="recording">The recording to delete.</param>
+            <returns>A tuple containing a boolean that indicates whether the deletion process was successful, and a string that contains a more descriptive message.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Cloud.DeleteRecordings(System.Collections.Generic.IEnumerable{MAGES.Recorder.RecorderModule.Recording})">
+            <summary>
+            Deletes multiple recordings.
+            </summary>
+            <param name="recordings">The recordings to delete.</param>
+            <returns>A tuple containing a boolean that indicates whether the deletion process was successful, and a string that contains a more descriptive message.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Cloud.EditRecording(System.String,MAGES.Recorder.RecorderModule.Recording)">
+            <summary>
+            Edits a recording.
+            </summary>
+            <param name="recordingId">The recording id to edit.</param>
+            <param name="newData">The new data to write to the recording.</param>
+            <returns>A tuple containing a boolean that indicates whether the edit process was successful, and a string that contains a more descriptive message.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.Cloud.Recording">
+            <summary>
+            A recording in the cloud.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Cloud.Recording.RecordingId">
+            <summary>
+            The recording ID.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Cloud.Recording.Title">
+            <summary>
+            The title of the recording.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Cloud.Recording.Date">
+            <summary>
+            The date of the recording.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Cloud.Recording.Duration">
+            <summary>
+            The duration of the recording.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Cloud.Recording.Product">
+            <summary>
+            The product code.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Cloud.Recording.User">
+            <summary>
+            The username.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Cloud.Recording.Image">
+            <summary>
+            A base64 encoded string of an image to use as a thumbnail.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Cloud.Recording.Tenant">
+            <summary>
+            A value indicating whether the user is a tenant.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Cloud.Recording.IsPublic">
+            <summary>
+            A value indicating whether the recording is an instructor recording.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Cloud.Recording.StoragePathURL">
+            <summary>
+            The storage path URL.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Cloud.Recording.IsInstructor">
+            <summary>
+            A value indicating whether the recording is an instructor recording.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.HttpClientProgressExtensions">
+            <summary>
+            Provides extension methods for the HttpClient class.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.HttpClientProgressExtensions.DownloadDataAsync(System.Net.Http.HttpClient,System.String,System.IO.Stream,System.IProgress{System.Single},System.Threading.CancellationToken)">
+            <summary>
+            Downloads data from the specified URL to the specified stream.
+            </summary>
+            <param name="client">The client.</param>
+            <param name="requestUrl">The uri.</param>
+            <param name="destination">The destination stream.</param>
+            <param name="progress">The progress bar implementor.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>Task.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.HttpClientProgressExtensions.UploadDataAsync(System.Net.Http.HttpClient,System.String,System.IO.Stream,System.IProgress{System.Single},System.Threading.CancellationToken)">
+            <summary>
+            Uploads data to the specified URL.
+            </summary>
+            <param name="client">The http client.</param>
+            <param name="requestUrl">The url to make the request to.</param>
+            <param name="stream">The stream to read from.</param>
+            <param name="progress">The progress interface.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>A new task.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.CompressionMethod">
+            <summary>
+            Compression type of packet.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.CompressionMethod.None">
+            <summary>
+            No compression.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.CompressionMethod.LZ4">
+            <summary>
+            LZ4 compression.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.Container">
+            <summary>
+            A wrapper around an XREC file.
+            </summary>
+            <remarks>Used for streaming into and out of.</remarks>
+        </member>
+        <member name="M:MAGES.Recorder.Container.#ctor(System.String,System.IO.FileAccess)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.Container"/> class.
+            </summary>
+            <param name="filePath">The path of the file.</param>
+            <param name="access">The access mode.</param>
+            <exception cref="T:System.ArgumentException">Thrown when parameters are invalid.</exception>
+        </member>
+        <member name="M:MAGES.Recorder.Container.BuildOffsetMap(MAGES.Recorder.StartPacket@,MAGES.Recorder.EndPacket@)">
+            <summary>
+            Build a map of packet offsets in the stream.
+            </summary>
+            <param name="start">The start packet.</param>
+            <param name="end">The end packet.</param>
+            <returns>A mapping of time ranges into packet offsets.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Container.Reset">
+            <summary>
+            Reset the stream to the beginning.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Container.Seek(System.Int64)">
+            <summary>
+            Seek to a specific offset in the stream.
+            </summary>
+            <param name="offset">The offset (in bytes).</param>
+        </member>
+        <member name="M:MAGES.Recorder.Container.Close">
+            <summary>
+            Close the stream.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Container.Write(MAGES.Recorder.Packet)">
+            <summary>
+            Write a packet to the stream.
+            </summary>
+            <param name="packet">The packet to write.</param>
+            <exception cref="T:System.InvalidOperationException">Thrown when the stream is read-only.</exception>
+        </member>
+        <member name="M:MAGES.Recorder.Container.Read(MAGES.Recorder.Packet@)">
+            <summary>
+            Read a packet from the stream.
+            </summary>
+            <param name="packet">The packet.</param>
+            <returns>True if the packet was successfully read.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Container.ReadHeader">
+            <summary>
+            Read a packet header from the stream.
+            </summary>
+            <returns>The packet header.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when the stream is write-only.</exception>
+        </member>
+        <member name="T:MAGES.Recorder.ContinuousPlaybackObject`1">
+            <summary>
+            A group of continuous playback objects.
+            </summary>
+            <typeparam name="T">The value type that will be played back.</typeparam>
+        </member>
+        <member name="M:MAGES.Recorder.ContinuousPlaybackObject`1.#ctor(System.Func{`0,`0,System.Double,`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.ContinuousPlaybackObject`1"/> class.
+            </summary>
+            <param name="interpolate">The function used to interpolate between two values given a 0-1 double.</param>
+        </member>
+        <member name="M:MAGES.Recorder.ContinuousPlaybackObject`1.CreateVector3">
+            <summary>
+            Creates a new continuous playback object for Vector3 values.
+            </summary>
+            <returns>The new instatnce of the object.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.ContinuousPlaybackObject`1.CreateQuaternion">
+            <summary>
+            Creates a new continuous playback object for Quaternion values.
+            </summary>
+            <returns>The new instance of the object.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.ContinuousPlaybackObject`1.AddSampleInTime(`0,System.Double)">
+            <summary>
+            Adds a sample in time.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="time">The time at which this value has to match the calculated value.</param>
+        </member>
+        <member name="M:MAGES.Recorder.ContinuousPlaybackObject`1.Update(System.Double)">
+            <summary>
+            Updates the playback object.
+            </summary>
+            <param name="nowTime">The position of the play cursor.</param>
+            <returns>The updated value of the object.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.EndPacket">
+            <summary>
+            Packet sent at the end of a recording.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.EndPacket.#ctor(System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.EndPacket"/> class.
+            </summary>
+            <param name="rtss">The real time since startup value when this packet was created.</param>
+        </member>
+        <member name="P:MAGES.Recorder.EndPacket.Type">
+            <summary>
+            Gets the type of packet.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.EndPacket.Rtss">
+            <summary>
+            Gets the RTSS of the packet.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.EventPacket">
+            <summary>
+            An event packet.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.EventPacket.#ctor(MAGES.Recorder.ICapturedEvent[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.EventPacket"/> class.
+            </summary>
+            <param name="capturedEvents">The captured events array.</param>
+        </member>
+        <member name="P:MAGES.Recorder.EventPacket.Type">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Recorder.EventPacket.CapturedEvents">
+            <summary>
+            Gets the captured events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.EventPacket.FrameBegin">
+            <summary>
+            Gets the earlist frame in the packet.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.EventPacket.FrameEnd">
+            <summary>
+            Gets the latest frame in the packet.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.EventPacket.RtssBegin">
+            <summary>
+            Gets the earliest RTSS in the packet.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.EventPacket.RtssEnd">
+            <summary>
+            Gets the latest RTSS in the packet.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.GameObjectPathCache">
+            <summary>
+            A cache for gameobject paths.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.GameObjectPathCache.Get(System.String)">
+            <summary>
+            Gets the GameObject at the given path.
+            </summary>
+            <param name="path">The path.</param>
+            <returns>The gameobject.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.GameObjectPathCache.SetVariable(System.String,UnityEngine.GameObject)">
+            <summary>
+            Sets the variable.
+            </summary>
+            <param name="variableName">The name of the variable.</param>
+            <param name="gameObject">The gameobject to set it to.</param>
+        </member>
+        <member name="T:MAGES.Recorder.GameObjectSpawnerCaptor">
+            <summary>
+            Captures events from the <see cref="T:MAGES.Utilities.GameObjectSpawner"/> class.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.GameObjectSpawnerCaptor.IsPolling">
+            <summary>
+            Gets a value indicating whether this captor is polling.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.GameObjectSpawnerCaptor.Init">
+            <summary>
+            Initializes the captor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.GameObjectSpawnerCaptor.Deinit">
+            <summary>
+            Deinitialize the encoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.GameObjectSpawnerCaptor.Poll(System.Double)">
+            <summary>
+            Polls the captor for data.
+            </summary>
+            <param name="timestamp">The current timestamp.</param>
+        </member>
+        <member name="T:MAGES.Recorder.GameObjectSpawnerInterpreter">
+            <summary>
+            An interpreter for position and rotation changes.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.GameObjectSpawnerInterpreter.Enabled">
+            <summary>
+            Gets a value indicating whether the interpreter is enabled and should receive update events.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.GameObjectSpawnerInterpreter.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.GameObjectSpawnerInterpreter.Deinitialize">
+            <summary>
+            Deinitializes this instance.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.GameObjectSpawnerInterpreter.Interpret(MAGES.Recorder.ICapturedEvent)">
+            <summary>
+            Interprets the event.
+            </summary>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="M:MAGES.Recorder.GameObjectSpawnerInterpreter.FixedUpdate">
+            <summary>
+            Called at the end of the physics update.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.GameObjectSpawnerInterpreter.LateUpdate">
+            <summary>
+            Called at the start of the update loop.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.GameObjectSpawnerInterpreter.Update">
+            <summary>
+            Called at the end of the update loop.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.GameObjectSpawnEvent">
+            <summary>
+            Represents an event regarding the spawning of a GameObject.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.GameObjectSpawnEvent.#ctor(MAGES.Utilities.GameObjectSpawner.SpawnParams,System.Int64,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.GameObjectSpawnEvent"/> class.
+            </summary>
+            <param name="spawnParams">The spawn params used for this object.</param>
+            <param name="frameCount">The frame counter.</param>
+            <param name="captureTime">The capture time of this event.</param>
+        </member>
+        <member name="P:MAGES.Recorder.GameObjectSpawnEvent.CreateTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was created (NOT captured).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.GameObjectSpawnEvent.CaptureTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was captured.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.GameObjectSpawnEvent.CreateFrame">
+            <summary>
+            Gets the frame the event was captured on.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.GameObjectSpawnEvent.ResourceRelativePath">
+            <summary>
+            Gets the relative path to the resource that was spawned.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.GameObjectSpawnEvent.TransformParentPath">
+            <summary>
+            Gets the path to the transform parent for the spawned object (if any).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.GameObjectSpawnEvent.IsUnique">
+            <summary>
+            Gets a value indicating whether the event is unique.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.ICaptor">
+            <summary>
+            Interface for an object that creates events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ICaptor.IsPolling">
+            <summary>
+            Gets a value indicating whether the captor needs to poll for events.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.ICaptor.Init">
+            <summary>
+            Initialize the captor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.ICaptor.Deinit">
+            <summary>
+            Deinitialize the captor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.ICaptor.Poll(System.Double)">
+            <summary>
+            Poll for events.
+            </summary>
+            <param name="timestamp">The current timestamp.</param>
+        </member>
+        <member name="T:MAGES.Recorder.ICapturedEvent">
+            <summary>
+            An event captured by the recorder.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ICapturedEvent.CreateFrame">
+            <summary>
+            Gets the frame the event was captured on.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ICapturedEvent.CreateTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was created (NOT captured).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ICapturedEvent.CaptureTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was captured.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.ICodec">
+            <summary>
+            Represents a codec.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ICodec.Name">
+            <summary>
+            Gets the name of the library implementing a codec.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ICodec.Extensions">
+            <summary>
+            Gets the file extensions supported by the codec.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.ICodec.Priority">
+            <summary>
+            Gets the priority of the codec.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.ICodec.CreateEncoder(System.IO.BinaryWriter,System.Int32,System.Int32,MAGES.Recorder.PCM.Format,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Creates an encoder for the codec.
+            </summary>
+            <param name="writer">The writer to write the encoded data to.</param>
+            <param name="sampleRate">Sample rate of the input data.</param>
+            <param name="channels">Number of channels used.</param>
+            <param name="format">Format of the input data.</param>
+            <param name="options">Options for the encoder.</param>
+            <returns>An encoder interface for this audio codec.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.ICodec.CreateDecoder(System.IO.BinaryReader,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Creates a decoder for the codec.
+            </summary>
+            <param name="reader">The reader to read the encoded data from.</param>
+            <param name="options">Options for the decoder.</param>
+            <returns>A decoder interface for this audio codec.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.IDecoder">
+            <summary>
+            Represents a decoder.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IDecoder.SampleRate">
+            <summary>
+            Gets the sample rate.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IDecoder.Channels">
+            <summary>
+            Gets the number of channels.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IDecoder.Format">
+            <summary>
+            Gets the PCM format.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IDecoder.Reader">
+            <summary>
+            Gets or sets the reader.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IDecoder.Position">
+            <summary>
+            Gets or sets the position (in samples).
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IDecoder.Init">
+            <summary>
+            Initialize the decoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IDecoder.Deinit">
+            <summary>
+            Deinitialize the decoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IDecoder.Read(System.Int32,System.Int32@)">
+            <summary>
+            Read a number of samples.
+            </summary>
+            <param name="numSamples">The number of samples to read.</param>
+            <param name="numSamplesRead">The number of samples read.</param>
+            <returns>The samples.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.IEncoder">
+            <summary>
+            Represents an encoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IEncoder.Init">
+            <summary>
+            Initialize the encoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IEncoder.Deinit">
+            <summary>
+            Deinitialize the encoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IEncoder.PushSamples(System.Single[],System.Int32)">
+            <summary>
+            Push samples to the encoder.
+            </summary>
+            <param name="data">The sample data.</param>
+            <param name="channels">The number of channels.</param>
+        </member>
+        <member name="T:MAGES.Recorder.IInterpreter">
+            <summary>
+            A class that can interpret one or more <see cref="T:MAGES.Recorder.ICapturedEvent"/> types.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IInterpreter.Enabled">
+            <summary>
+            Gets a value indicating whether the interpreter is enabled and should receive update events.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IInterpreter.Interpret(MAGES.Recorder.ICapturedEvent)">
+            <summary>
+            Interprets the event.
+            </summary>
+            <param name="evt">The event itself.</param>
+            <remarks>Only event types in <see cref="T:MAGES.Recorder.InterpretsEventAttribute"/> will be sent to this method.</remarks>
+        </member>
+        <member name="M:MAGES.Recorder.IInterpreter.Initialize">
+            <summary>
+            Initialize the interpreter.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IInterpreter.Update">
+            <summary>
+            Called at the start of the update loop.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IInterpreter.FixedUpdate">
+            <summary>
+            Called at the end of the physics update.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IInterpreter.LateUpdate">
+            <summary>
+            Called at the end of the update loop.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IInterpreter.Deinitialize">
+            <summary>
+            Deinitialize the interpreter.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.InterpretsEventAttribute">
+            <summary>
+            An attribute that marks a class as an interpreter for a specific event type.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.InterpretsEventAttribute.#ctor(System.Type[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.InterpretsEventAttribute"/> class.
+            </summary>
+            <param name="eventTypes">The event types that should be sent to the interpreter.</param>
+        </member>
+        <member name="P:MAGES.Recorder.InterpretsEventAttribute.EventTypes">
+            <summary>
+            Gets the event types that should be sent to the interpreter decorated with this attribute.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.IntervalTree`2">
+            <summary>
+            A tree that stores intervals, and can be queried for values that fall within a given range.
+            </summary>
+            <typeparam name="TKey">The key type.</typeparam>
+            <typeparam name="TValue">The value type.</typeparam>
+        </member>
+        <member name="M:MAGES.Recorder.IntervalTree`2.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.IntervalTree`2"/> class.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IntervalTree`2.Count">
+            <summary>
+            Gets the number of items in the tree.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IntervalTree`2.Values">
+            <summary>
+            Gets the values.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IntervalTree`2.Min">
+            <summary>
+            Gets the minimum key.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IntervalTree`2.Max">
+            <summary>
+            Gets the maximum key.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IntervalTree`2.Q(`0)">
+            <summary>
+            Gets the values that intersect the point.
+            </summary>
+            <param name="point">The point key.</param>
+            <returns>List of values containing the point.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.IntervalTree`2.Q(`0,`0)">
+            <summary>
+            Gets the values that intersect the range.
+            </summary>
+            <param name="min">Minimum of the range.</param>
+            <param name="max">Maximum of the range.</param>
+            <returns>List of values that intersect or contain the range.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.IntervalTree`2.Add(`0,`0,`1)">
+            <summary>
+            Adds a new value to the tree.
+            </summary>
+            <param name="min">The minimum range.</param>
+            <param name="max">The maxmimum range.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:MAGES.Recorder.IntervalTree`2.ToString">
+            <summary>
+            Converts the tree to a string.
+            </summary>
+            <returns>Multiline string for the tree.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.IntervalTree`2.CompletelyContains(`0,`0)">
+            <summary>
+            Determines if a given range is contained in the tree.
+            </summary>
+            <param name="min">The minimum of the range.</param>
+            <param name="max">The maximum of the range.</param>
+            <returns>True if the range is contained in the tree.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.IntervalTree`2.RVP.#ctor(`0,`0,`1)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.IntervalTree`2.RVP"/> struct.
+            </summary>
+            <param name="min">The minimum key.</param>
+            <param name="max">The maximum key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="P:MAGES.Recorder.IntervalTree`2.RVP.Min">
+            <summary>
+            Gets the minimum key.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IntervalTree`2.RVP.Max">
+            <summary>
+            Gets the maximum key.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IntervalTree`2.RVP.Value">
+            <summary>
+            Gets the value.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IntervalTree`2.RVP.Side(`0)">
+            <summary>
+            Determines if the given key is within the range of this RVP.
+            </summary>
+            <param name="comparand">The key.</param>
+            <returns>0 if inside, -1 if less than range, 1 if greater than range.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.IntervalTree`2.RVP.Side(`0,`0)">
+            <summary>
+            Determines if the given range is within the range of this RVP.
+            </summary>
+            <param name="comparandMin">The minimum comparand.</param>
+            <param name="comparandMax">The maximum comparand.</param>
+            <returns>
+            -2: Range is on the left side of this RVP.
+            -1: Range overlaps coming from the left.
+             0: Range is inside this RVP, or is RVP.
+            +1: Range overlaps coming from the right.
+            +2: Range is on the right side of this RVP.
+            </returns>
+        </member>
+        <member name="P:MAGES.Recorder.IntervalTree`2.Node.Left">
+            <summary>
+            Gets the left child.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IntervalTree`2.Node.Right">
+            <summary>
+            Gets the right child.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.IntervalTree`2.Node.Items">
+            <summary>
+            Gets the items.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.IntervalTree`2.Node.Contains(`0,`0)">
+            <summary>
+            Determines if the given range is contained in the sub-tree.
+            </summary>
+            <param name="min">The minimum key.</param>
+            <param name="max">The maximum key.</param>
+            <returns>
+            -2: Range is on the left side of this RVP.
+            -1: Range is intersected coming from the left.
+             0: Range is inside this RVP, or is RVP.
+            +1: Range is intersected coming from the right.
+            +2: Range is on the right side of this RVP.
+            </returns>
+        </member>
+        <member name="T:MAGES.Recorder.MicrophoneCaptor">
+            <summary>
+            Captures local user's microphone.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.MicrophoneCaptor.IsPolling">
+            <summary>
+            Gets a value indicating whether the captor needs to be polled.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.MicrophoneCaptor.Init">
+            <summary>
+            Initializes this captor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.MicrophoneCaptor.Deinit">
+            <summary>
+            Deinitialize the captor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.MicrophoneCaptor.Poll(System.Double)">
+            <summary>
+            Polls the captor for new data.
+            </summary>
+            <param name="timestamp">The timestamp.</param>
+            <remarks>
+            This method will only be called if <see cref="P:MAGES.Recorder.MicrophoneCaptor.IsPolling"/> is true.
+            </remarks>
+        </member>
+        <member name="T:MAGES.Recorder.MicrophoneEvent">
+            <summary>
+            A microphone begin event, either from external file or interleaved inside the recording.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.MicrophoneEvent.#ctor(System.Int64,System.Double,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.MicrophoneEvent"/> class.
+            </summary>
+            <param name="frameCount">The frame count.</param>
+            <param name="captureTime">The capture time.</param>
+            <param name="relativeFilePath">The relative file path.</param>
+        </member>
+        <member name="T:MAGES.Recorder.MicrophoneEvent.SourceCategory">
+            <summary>
+            Designates the category/importance of the microphone.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.MicrophoneEvent.SourceCategory.LocalPlayer">
+            <summary>
+            The local player.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.MicrophoneEvent.SourceCategory.RemotePlayer">
+            <summary>
+            A remote player.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.MicrophoneEvent.CreateTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was created (NOT captured).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.MicrophoneEvent.CaptureTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was captured.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.MicrophoneEvent.CreateFrame">
+            <summary>
+            Gets the frame the event was captured on.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.MicrophoneEvent.CodecName">
+            <summary>
+            Gets the codec name (in other words, which codec will be used to decode the audio data).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.MicrophoneEvent.RelativeFilePath">
+            <summary>
+            Gets the relative file path to the audio data, or null if audio is inside xrec file.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.MicrophoneEvent.Source">
+            <summary>
+            Gets or sets the source category.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.MicrophoneEvent.Device">
+            <summary>
+            Gets or sets the device name.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.MicrophoneInterpreter">
+            <summary>
+            An interpreter for microphone events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.MicrophoneInterpreter.Enabled">
+            <summary>
+            Gets a value indicating whether the interpreter is enabled and should receive update events.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.MicrophoneInterpreter.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.MicrophoneInterpreter.Deinitialize">
+            <summary>
+            Deinitializes this instance.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.MicrophoneInterpreter.Interpret(MAGES.Recorder.ICapturedEvent)">
+            <summary>
+            Interprets the event.
+            </summary>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="M:MAGES.Recorder.MicrophoneInterpreter.FixedUpdate">
+            <summary>
+            Called at the end of the physics update.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.MicrophoneInterpreter.LateUpdate">
+            <summary>
+            Called at the start of the update loop.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.MicrophoneInterpreter.Update">
+            <summary>
+            Called at the end of the update loop.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.MicrophoneInterpreter.DecoderCtx.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.MicrophoneInterpreter.DecoderCtx"/> class.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.MicrophoneInterpreter.PlaybackCtx.#ctor(System.String,System.Action{MAGES.Recorder.MicrophoneInterpreter.IOFetchRequest})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.MicrophoneInterpreter.PlaybackCtx"/> class.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.Packet">
+            <summary>
+            A packet.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Packet.Type">
+            <summary>
+            Gets the type of the packet.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.PacketHeader">
+            <summary>
+            The packet header.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PacketHeader.#ctor(MAGES.Recorder.PacketType,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.PacketHeader"/> struct.
+            </summary>
+            <param name="type">The type of the packet.</param>
+            <param name="size">The size (in bytes) of the following payload.</param>
+        </member>
+        <member name="P:MAGES.Recorder.PacketHeader.Type">
+            <summary>
+            Gets or sets the type of the packet.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PacketHeader.Size">
+            <summary>
+            Gets or sets the size of the packet following.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.PacketType">
+            <summary>
+            The type of a given packet.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.PacketType.Event">
+            <summary>
+            An event packet.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.PacketType.Start">
+            <summary>
+            A start packet.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.PacketType.End">
+            <summary>
+            An end packet.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.PCM">
+            <summary>
+            PCM format.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.PCM.Format">
+            <summary>
+            Represents a PCM format.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.PCM.Format.I8">
+            <summary>
+            8-bit signed integer (from -128 to 127).
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.PCM.Format.U8">
+            <summary>
+            8-bit unsigned integer (from 0 to 255).
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.PCM.Format.I16">
+            <summary>
+            16-bit signed integer (from -32768 to 32767).
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.PCM.Format.U16">
+            <summary>
+            16-bit unsigned integer (from 0 to 65535).
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.PCM.Format.NF32">
+            <summary>
+            Normalized float (-1.0 to 1.0).
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PCM.BitsPerSample(MAGES.Recorder.PCM.Format)">
+            <summary>
+            Gets the number of bits per sample.
+            </summary>
+            <param name="format">The format.</param>
+            <returns>The number of bits per sample.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.PCM.BytesPerSample(MAGES.Recorder.PCM.Format)">
+            <summary>
+            Gets the number of bytes per sample.
+            </summary>
+            <param name="format">The format.</param>
+            <returns>The number of bytes per sample.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.PCM.CvFormatToNF32(System.Array,System.Int32,MAGES.Recorder.PCM.Format)">
+            <summary>
+            Converts samples to f32 [-1,1] format.
+            </summary>
+            <param name="data">The samples to convert.</param>
+            <param name="channels">The number of channels.</param>
+            <param name="inputFormat">The input format.</param>
+            <returns>The converted samples.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.PCM.CvNF32ToFormat(System.Single[],System.Int32,MAGES.Recorder.PCM.Format)">
+            <summary>
+            Converts f32 [-1,1] samples to the target format.
+            </summary>
+            <param name="data">The samples to convert.</param>
+            <param name="channels">The number of channels.</param>
+            <param name="targetFormat">The target format.</param>
+            <returns>The converted samples.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.Player">
+            <summary>
+            Responsible for playing back a recording (XREC file).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Player.CurrentFilePath">
+            <summary>
+            Gets the current file path.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Player.Current01">
+            <summary>
+            Gets the current playback position as a fraction of the total duration.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Player.EndRTSS">
+            <summary>
+            Gets the end of the recording in RTSS.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Player.Cursor">
+            <summary>
+            Gets the current playback position in RTSS.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Player.Paused">
+            <summary>
+            Gets a value indicating whether the player is paused.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Player.OnRunChanged">
+            <summary>
+            Gets the event that is triggered when the player is paused or unpaused.
+            </summary>
+            <remarks>True when paused.</remarks>
+        </member>
+        <member name="M:MAGES.Recorder.Player.LoadAndPlay(System.String)">
+            <summary>
+            Loads a recording and starts playing it.
+            </summary>
+            <param name="filePath">The file to play from.</param>
+        </member>
+        <member name="M:MAGES.Recorder.Player.Stop">
+            <summary>
+            Stops the player.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Player.SetPaused(System.Boolean)">
+            <summary>
+            Set the player to paused or unpaused.
+            </summary>
+            <param name="on">True for paused, false for unpaused.</param>
+        </member>
+        <member name="M:MAGES.Recorder.Player.Schedule(System.Action,System.Double)">
+            <summary>
+            Schedules an action to be run around a specific time in the cursor.
+            </summary>
+            <param name="action">The action to run.</param>
+            <param name="forTime">The point in time where it has to be run.</param>
+        </member>
+        <member name="T:MAGES.Recorder.PlayerSelectionUI">
+            <summary>
+            Controls the UI for selecting a recording.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.PlayerUI">
+            <summary>
+            The logic of the "Player UI" prefab for the XR Recorder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PlayerUI.SetFileName(System.String)">
+            <summary>
+            Sets the filename of the recording.
+            </summary>
+            <param name="name"> The name of the recording to set. </param>
+        </member>
+        <member name="T:MAGES.Recorder.PointerCaptor">
+            <summary>
+            Captures pointer events from unity's <see cref="T:UnityEngine.EventSystems.EventSystem"/>.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PointerCaptor.IsPolling">
+            <summary>
+            Gets a value indicating whether the captor needs to be polled.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PointerCaptor.Init">
+            <summary>
+            Initializes this captor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PointerCaptor.Deinit">
+            <summary>
+            Deinitialize the encoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PointerCaptor.Poll(System.Double)">
+            <summary>
+            Polls the captor for new data.
+            </summary>
+            <param name="timestamp">The timestamp.</param>
+            <remarks>
+            This method will only be called if <see cref="P:MAGES.Recorder.PointerCaptor.IsPolling"/> is true.
+            </remarks>
+        </member>
+        <member name="T:MAGES.Recorder.PointerClickEvent">
+            <summary>
+            An event that encompasses data for when a pointer click event is executed on a <see cref="T:UnityEngine.UI.Selectable"/>.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PointerClickEvent.#ctor(System.Int64,System.Double,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.PointerClickEvent"/> class.
+            </summary>
+            <param name="frameCount">The frame count.</param>
+            <param name="captureTime">The capture time.</param>
+            <param name="path">The path to the game object.</param>
+        </member>
+        <member name="P:MAGES.Recorder.PointerClickEvent.CreateTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was created (NOT captured).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PointerClickEvent.CaptureTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was captured.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PointerClickEvent.CreateFrame">
+            <summary>
+            Gets the frame the event was captured on.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PointerClickEvent.Path">
+            <summary>
+            Gets the game object path of the pressed game object.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PointerEnterExitEvent.#ctor(System.Int64,System.Double,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.PointerEnterExitEvent"/> class.
+            </summary>
+            <param name="frameCount">The frame count.</param>
+            <param name="captureTime">The capture time.</param>
+            <param name="path">The path to the game object.</param>
+        </member>
+        <member name="P:MAGES.Recorder.PointerEnterExitEvent.CreateTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was created (NOT captured).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PointerEnterExitEvent.CaptureTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was captured.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PointerEnterExitEvent.CreateFrame">
+            <summary>
+            Gets the frame the event was captured on.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PointerEnterExitEvent.Path">
+            <summary>
+            Gets the game object path of the pressed game object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PointerEnterExitEvent.IsEnter">
+            <summary>
+            Gets a value indicating whether this event is an enter (true) or exit (false) event.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.PointerInterpreter">
+            <summary>
+            An interpreter for <see cref="T:UnityEngine.UI.Selectable"/> click events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PointerInterpreter.Enabled">
+            <summary>
+            Gets a value indicating whether the interpreter is enabled and should receive update events.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PointerInterpreter.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PointerInterpreter.Deinitialize">
+            <summary>
+            Deinitializes this instance.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PointerInterpreter.Interpret(MAGES.Recorder.ICapturedEvent)">
+            <summary>
+            Interprets the event.
+            </summary>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="M:MAGES.Recorder.PointerInterpreter.FixedUpdate">
+            <summary>
+            Called at the end of the physics update.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PointerInterpreter.LateUpdate">
+            <summary>
+            Called at the start of the update loop.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PointerInterpreter.Update">
+            <summary>
+            Called at the end of the update loop.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.PositionChangeEvent">
+            <summary>
+            An event that captures a change in position.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.PositionChangeEvent.#ctor(System.String,UnityEngine.Vector3,System.Int64,System.Double,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.PositionChangeEvent"/> class.
+            </summary>
+            <param name="path">The path of the GameObject.</param>
+            <param name="position">The new position.</param>
+            <param name="frameCount">The frame count.</param>
+            <param name="captureTime">The capture time.</param>
+            <param name="isLocal">A value indicating whether the position is local.</param>
+        </member>
+        <member name="P:MAGES.Recorder.PositionChangeEvent.CreateTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was created (NOT captured).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PositionChangeEvent.CaptureTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was captured.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PositionChangeEvent.CreateFrame">
+            <summary>
+            Gets the frame the event was captured on.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PositionChangeEvent.Path">
+            <summary>
+            Gets the path of the gameobject.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PositionChangeEvent.Position">
+            <summary>
+            Gets the new position.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.PositionChangeEvent.IsLocal">
+            <summary>
+            Gets a value indicating whether the event was captured locally.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.PreservationToken">
+            <summary>
+            Prevents this assembly from being stripped by the linker.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.Recorder">
+            <summary>
+            The component responsible for capturing input and determining synchronization points.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Recorder.frameCounter">
+            <summary>
+            Last frame processed.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Recorder.CurrentFrame">
+            <summary>
+            Gets the current frame.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Recorder.Running">
+            <summary>
+            Gets a value indicating whether the recorder is running.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Recorder.FinalTime">
+            <summary>
+            Gets the final time of the recording.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Recorder.QueuedEvents">
+            <summary>
+            Gets the number of events queued.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Recorder.InFlightEvents">
+            <summary>
+            Gets the number of events in flight.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Recorder.Audio">
+            <summary>
+            Gets the audio capture.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Recorder.Cursor">
+            <summary>
+            Gets the current cursor position.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Recorder.UserAvatarDelegator">
+            <summary>
+            Gets the user avatar delegator.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Recorder.Add(MAGES.Recorder.ICapturedEvent)">
+            <summary>
+            Add an event to the recorder.
+            </summary>
+            <param name="ev">The captured event.</param>
+        </member>
+        <member name="M:MAGES.Recorder.Recorder.AddSupplementaryFile(System.String)">
+            <summary>
+            Add a supplementary file to the recording.
+            </summary>
+            <param name="path">The relative path of the file.</param>
+        </member>
+        <member name="M:MAGES.Recorder.Recorder.Stop">
+            <summary>
+            Stops the recording.
+            </summary>
+            <returns>The recording files.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Recorder.Initialize(System.String)">
+            <summary>
+            Initialize the recorder.
+            </summary>
+            <param name="filePath">The path to save the recording.</param>
+        </member>
+        <member name="T:MAGES.Recorder.RecorderModule">
+            <summary>
+            The root module for the XR recorder.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.FrameSkip">
+            <summary>
+            Gets or sets the number of frames to skip between polling.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.IsRecording">
+            <summary>
+            Gets a value indicating whether the recorder is recording.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.AudioCodec">
+            <summary>
+            Gets or sets the audio codec.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.CurrentFrame">
+            <summary>
+            Gets the current frame of recording/playback.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.GetRecordingsDataURL">
+            <summary>
+            Gets the url to get recordings data.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.PutRecordingsDataURL">
+            <summary>
+            Gets the url to put recordings data.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.DownloadRecordingURL">
+            <summary>
+            Gets the url to download recordings data.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.DeleteRecordingURL">
+            <summary>
+            Gets the url to delete recordings data.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.PatchRecordingURL">
+            <summary>
+            Gets the url to patch recordings data.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.Armed">
+            <summary>
+            Gets or sets a value indicating whether the recorder will start recording when appropriate.
+            </summary>
+            <remarks>This doesn't mean you can start/stop recording whenever - only before the start action).</remarks>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.PlayerMenu">
+            <summary>
+            Gets the gameobject that is used as the menu of the recorder.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.Proxy">
+            <summary>
+            Gets the proxy gameobject.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.Events">
+            <summary>
+            Gets the event delegator.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.RecorderInstance">
+            <summary>
+            Gets the recorder instance.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.PlayerInstance">
+            <summary>
+            Gets the player instance.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.PathCache">
+            <summary>
+            Gets the path cache.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.RecorderModule.GetRecordingLength(System.String)">
+            <summary>
+            Gets the length of a recording in seconds.
+            </summary>
+            <param name="file">The file to read.</param>
+            <returns>The amount of seconds the recording takes.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.RecorderModule.Startup">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Recorder.RecorderModule.Shutdown">
+            <inheritdoc/>
+        </member>
+        <member name="M:MAGES.Recorder.RecorderModule.GetRecordings">
+            <summary>
+            Gets all recordings.
+            </summary>
+            <returns>An enumerable of recordings.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.RecorderModule.StopRecording">
+            <summary>
+            Stop Recording.
+            </summary>
+            <returns>The recording files.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.RecorderModule.UploadRecording(MAGES.Recorder.RecorderModule.Recording,System.Action{System.Boolean},System.Action{System.Single,System.String},System.Boolean)">
+            <summary>
+            Uploads a recording.
+            </summary>
+            <param name="recording">The recording to upload.</param>
+            <param name="onUploadComplete">Action invoked when the upload completed or failed.</param>
+            <param name="onUploadUpdate">Action invoked when the upload is in progress.</param>
+            <param name="asInstructor">A value indicating whether the recording is an instructor recording.</param>
+            <remarks>
+            The <paramref name="onUploadUpdate"/> action is invoked from a background thread,
+            so no use of any Unity API call is allowed.
+            </remarks>
+        </member>
+        <member name="T:MAGES.Recorder.RecorderModule.Recording">
+            <summary>
+            Represents a recording.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.Recording.IsRemote">
+            <summary>
+            Gets or sets a value indicating whether the recording is remote.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.Recording.Product">
+            <summary>
+            Gets or sets the product of the recording.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.Recording.IsInstructor">
+            <summary>
+            Gets or sets a value indicating whether the recording is an instructor recording.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.Recording.Path">
+            <summary>
+            Gets or sets the path of the recording.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.Recording.Title">
+            <summary>
+            Gets or sets the title of the recording.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.Recording.Id">
+            <summary>
+            Gets or sets the id of the recording.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.Recording.Username">
+            <summary>
+            Gets or sets the username of the recording.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.Recording.Date">
+            <summary>
+            Gets or sets the date of the recording.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.Recording.Tenant">
+            <summary>
+            Gets or sets the tenant of the recording.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RecorderModule.Recording.Duration">
+            <summary>
+            Gets or sets the duration of the recording.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.RigCaptor">
+            <summary>
+            Captures rigs in single-player and multiplayer.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RigCaptor.IsPolling">
+            <summary>
+            Gets a value indicating whether the captor needs to be polled.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.RigCaptor.Init">
+            <summary>
+            Initializes this captor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.RigCaptor.Deinit">
+            <summary>
+            Deinitialize the encoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.RigCaptor.Poll(System.Double)">
+            <summary>
+            Polls the captor for new data.
+            </summary>
+            <param name="timestamp">The timestamp.</param>
+            <remarks>
+            This method will only be called if <see cref="P:MAGES.Recorder.RigCaptor.IsPolling"/> is true.
+            </remarks>
+        </member>
+        <member name="T:MAGES.Recorder.RotationChangeEvent">
+            <summary>
+            An event that captures a change in rotation.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.RotationChangeEvent.#ctor(System.String,UnityEngine.Quaternion,System.Int64,System.Double,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.RotationChangeEvent"/> class.
+            </summary>
+            <param name="path">The path of the GameObject.</param>
+            <param name="rotation">The new position.</param>
+            <param name="frameCount">The frame count.</param>
+            <param name="captureTime">The capture time.</param>
+            <param name="isLocal">A value indicating whether the rotation is local.</param>
+        </member>
+        <member name="P:MAGES.Recorder.RotationChangeEvent.CreateTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was created (NOT captured).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RotationChangeEvent.CaptureTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was captured.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RotationChangeEvent.CreateFrame">
+            <summary>
+            Gets the frame the event was captured on.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RotationChangeEvent.Path">
+            <summary>
+            Gets the path of the GameObject.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RotationChangeEvent.Rotation">
+            <summary>
+            Gets the new rotation.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.RotationChangeEvent.IsLocal">
+            <summary>
+            Gets a value indicating whether the event is local.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.SceneGraphCaptor">
+            <summary>
+            Captures scenegraph events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.SceneGraphCaptor.IsPolling">
+            <summary>
+            Gets a value indicating whether this captor is polling for events.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.SceneGraphCaptor.Init">
+            <summary>
+            Initializes this captor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.SceneGraphCaptor.Deinit">
+            <summary>
+            Deinitialize the encoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.SceneGraphCaptor.Poll(System.Double)">
+            <summary>
+            Polls for events (unused).
+            </summary>
+            <param name="timestamp">The timestamp.</param>
+        </member>
+        <member name="T:MAGES.Recorder.SceneGraphEvent">
+            <summary>
+            Represents an event regarding an action's state change in the scene graph.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.SceneGraphEvent.#ctor(System.String,MAGES.Recorder.SceneGraphEvent.SceneGraphEventType,System.Int64,System.Double,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.SceneGraphEvent"/> class.
+            </summary>
+            <param name="id">The action id.</param>
+            <param name="type">The type of event.</param>
+            <param name="frameCount">The frame counter.</param>
+            <param name="captureTime">The capture time.</param>
+            <param name="skipped">Whether the action was skipped.</param>
+        </member>
+        <member name="T:MAGES.Recorder.SceneGraphEvent.SceneGraphEventType">
+            <summary>
+            Represents the type of scene graph event.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.SceneGraphEvent.SceneGraphEventType.ActionInitialized">
+            <summary>
+            The action was initialized.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.SceneGraphEvent.SceneGraphEventType.ActionPerformed">
+            <summary>
+            The action was performed.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.SceneGraphEvent.SceneGraphEventType.ActionUndone">
+            <summary>
+            The action was undone.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.SceneGraphEvent.CreateTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was created (NOT captured).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.SceneGraphEvent.CaptureTime">
+            <summary>
+            Gets the estimated time (wall-clock time) when the event was captured.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.SceneGraphEvent.CreateFrame">
+            <summary>
+            Gets the frame the event was captured on.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.SceneGraphEvent.ID">
+            <summary>
+            Gets the <see cref="P:MAGES.BaseActionData.ID"/>.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.SceneGraphEvent.Type">
+            <summary>
+            Gets the type of event.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.SceneGraphEvent.Skipped">
+            <summary>
+            Gets a value indicating whether the action was skipped.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.SceneGraphInterpreter">
+            <summary>
+            An interpreter for Scene graph events.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.SceneGraphInterpreter.Enabled">
+            <summary>
+            Gets a value indicating whether the interpreter is enabled and should receive update events.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.SceneGraphInterpreter.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.SceneGraphInterpreter.Deinitialize">
+            <summary>
+            Deinitializes this instance.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.SceneGraphInterpreter.Interpret(MAGES.Recorder.ICapturedEvent)">
+            <summary>
+            Interprets the event.
+            </summary>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="M:MAGES.Recorder.SceneGraphInterpreter.FixedUpdate">
+            <summary>
+            Called at the end of the physics update.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.SceneGraphInterpreter.LateUpdate">
+            <summary>
+            Called at the start of the update loop.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.SceneGraphInterpreter.Update">
+            <summary>
+            Called at the end of the update loop.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.StandardTypesSerializationSurrogates">
+            <summary>
+            The standard types serialization surrogates.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.StandardTypesSerializationSurrogates.Formatter">
+            <summary>
+            Creates a new binary formatter with the standard types serialization surrogates.
+            </summary>
+            <returns>The binary formatter.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.StandardTypesSerializationSurrogates.Vector3SerializationSurrogate">
+            <summary>
+            The vector3 serialization surrogate.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.StandardTypesSerializationSurrogates.Vector3SerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Gets the object data.
+            </summary>
+            <param name="obj">The object instance.</param>
+            <param name="info">The serialization info.</param>
+            <param name="context">The stream context.</param>
+        </member>
+        <member name="M:MAGES.Recorder.StandardTypesSerializationSurrogates.Vector3SerializationSurrogate.SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)">
+            <summary>
+            Sets the object data.
+            </summary>
+            <param name="obj">The object instance.</param>
+            <param name="info">The serialization info.</param>
+            <param name="context">The stream context.</param>
+            <param name="selector">the selector.</param>
+            <returns>The object.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.StandardTypesSerializationSurrogates.QuaternionSerializationSurrogate">
+            <summary>
+            The quaternion serialization surrogate.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.StandardTypesSerializationSurrogates.QuaternionSerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Gets the object data.
+            </summary>
+            <param name="obj">The object instance.</param>
+            <param name="info">The serialization info.</param>
+            <param name="context">The stream context.</param>
+        </member>
+        <member name="M:MAGES.Recorder.StandardTypesSerializationSurrogates.QuaternionSerializationSurrogate.SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)">
+            <summary>
+            Sets the object data.
+            </summary>
+            <param name="obj">The object instance.</param>
+            <param name="info">The serialization info.</param>
+            <param name="context">The stream context.</param>
+            <param name="selector">the selector.</param>
+            <returns>The object.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.StartPacket">
+            <summary>
+            Header packet for the recording.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.StartPacket.#ctor(System.Int32,MAGES.Recorder.CompressionMethod,System.Int64,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.StartPacket"/> class.
+            </summary>
+            <param name="version">The version.</param>
+            <param name="compression">The compression method.</param>
+            <param name="frame">The current frame number.</param>
+            <param name="rtss">The real time since startup.</param>
+        </member>
+        <member name="P:MAGES.Recorder.StartPacket.Version">
+            <summary>
+            Gets the version of the packet.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.StartPacket.Compression">
+            <summary>
+            Gets the compression method used for the packet.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.StartPacket.Type">
+            <inheritdoc/>
+        </member>
+        <member name="P:MAGES.Recorder.StartPacket.Rtss">
+            <summary>
+            Gets the RTSS of the packet.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.TransformationInterpreter">
+            <summary>
+            An interpreter for position and rotation changes.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.TransformationInterpreter.Enabled">
+            <summary>
+            Gets a value indicating whether the interpreter is enabled and should receive update events.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.TransformationInterpreter.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.TransformationInterpreter.Deinitialize">
+            <summary>
+            Deinitializes this instance.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.TransformationInterpreter.Interpret(MAGES.Recorder.ICapturedEvent)">
+            <summary>
+            Interprets the event.
+            </summary>
+            <param name="evt">The event.</param>
+        </member>
+        <member name="M:MAGES.Recorder.TransformationInterpreter.FixedUpdate">
+            <summary>
+            Called at the end of the physics update.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.TransformationInterpreter.LateUpdate">
+            <summary>
+            Called at the end of the update loop.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.TransformationInterpreter.Update">
+            <summary>
+            Called at the start of the update loop.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.TransformationInterpreter.FlaggedValue`1">
+            <summary>
+            A class that holds a value and a flag.
+            </summary>
+            <typeparam name="T">The internal value type.</typeparam>
+        </member>
+        <member name="P:MAGES.Recorder.TransformationInterpreter.FlaggedValue`1.Value">
+            <summary>
+            Gets or sets a value indicating whether the value has been flagged.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.TransformationInterpreter.FlaggedValue`1.Flag">
+            <summary>
+            Gets or sets a value indicating whether this object is flagged.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.TransformCaptor">
+            <summary>
+            Captures transform events sent to/from the network.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.TransformCaptor.IsPolling">
+             <summary>
+             Gets a value indicating whether this captor is polling for events.
+             </summary>
+            
+             @note(mdodis): Since networking is non-existent, we'll have to pretend that we are capturing network events. So, we'll poll for now.
+        </member>
+        <member name="M:MAGES.Recorder.TransformCaptor.Init">
+            <summary>
+            Initializes this captor.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.TransformCaptor.Deinit">
+            <summary>
+            Deinitialize the encoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.TransformCaptor.Poll(System.Double)">
+            <summary>
+            Polls for events.
+            </summary>
+            <param name="timestamp">The current timestamp.</param>
+        </member>
+        <member name="T:MAGES.Recorder.TransformCaptureGroup">
+            <summary>
+            A utility class that helps with capturing transformation changes in Gameobjects.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.TransformCaptureGroup.CaptureMethod">
+            <summary>
+            The capture method flags.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.TransformCaptureGroup.CaptureMethod.None">
+            <summary>
+            No capture method.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.TransformCaptureGroup.CaptureMethod.Position">
+            <summary>
+            Capture the position.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.TransformCaptureGroup.CaptureMethod.Rotation">
+            <summary>
+            Capture the rotation.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.TransformCaptureGroup.CaptureMethod.Scale">
+            <summary>
+            Capture the scale.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.TransformCaptureGroup.CaptureMethod.VariableName">
+            <summary>
+            Use special name instead of object path for storage.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.TransformCaptureGroup.CaptureMethod.Local">
+            <summary>
+            Capture the local position, rotation and scale.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.TransformCaptureGroup.CaptureMethod.PositionRotation">
+            <summary>
+            Capture position and rotation.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.TransformCaptureGroup.CaptureMethod.Transform">
+            <summary>
+            Capture position, rotation and scale.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.TransformCaptureGroup.Remove(UnityEngine.GameObject)">
+            <summary>
+            Removes a GameObject from the capture group.
+            </summary>
+            <param name="gameObject">The game object to remove.</param>
+        </member>
+        <member name="M:MAGES.Recorder.TransformCaptureGroup.Clear">
+            <summary>
+            Clears the capture group of any objects contained inside.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.TransformCaptureGroup.Add(UnityEngine.GameObject,MAGES.Recorder.TransformCaptureGroup.CaptureMethod,System.String)">
+            <summary>
+            Adds a GameObject to the capture group.
+            </summary>
+            <param name="gameObject">The game object.</param>
+            <param name="flags">The capture method flags (optional).</param>
+            <param name="varName">The variable name (optional).</param>
+        </member>
+        <member name="M:MAGES.Recorder.TransformCaptureGroup.AddUnsafe(UnityEngine.GameObject,MAGES.Recorder.TransformCaptureGroup.CaptureMethod,System.String)">
+            <summary>
+            Adds a GameObject to the capture group without doing any checks for validity.
+            </summary>
+            <param name="gameObject">The game object.</param>
+            <param name="flags">The capture method flags (optional).</param>
+            <param name="varName">The variable name (optional).</param>
+        </member>
+        <member name="M:MAGES.Recorder.TransformCaptureGroup.Poll(System.Action{MAGES.Recorder.ICapturedEvent},System.Int64,System.Double)">
+            <summary>
+            Polls for changes in all captured objects.
+            </summary>
+            <param name="sendEvent">The event sender.</param>
+            <param name="frame">The current frame.</param>
+            <param name="timestamp">The current timestamp.</param>
+        </member>
+        <member name="T:MAGES.Recorder.Utilities">
+            <summary>
+            Recorder utilities.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.Proxy">
+            <summary>
+            Gets the proxy gameobject.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.ProxyClients">
+            <summary>
+            Gets the gameobject in which the client avatar instances will be stored.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.GetNextPacket(System.IO.Stream)">
+            <summary>
+            Read a packet from a stream.
+            </summary>
+            <param name="stream">The stream to read from.</param>
+            <returns>The packet read.</returns>
+            <exception cref="T:System.IO.InvalidDataException">Thrown when stream is invalid.</exception>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.WritePacket(MAGES.Recorder.Packet,System.IO.Stream)">
+            <summary>
+            Write a packet to a stream.
+            </summary>
+            <param name="packet">The packet.</param>
+            <param name="stream">The output stream.</param>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ApproximatelyEqual(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+            Compares 2 vectors.
+            </summary>
+            <param name="a">First vector.</param>
+            <param name="b">Second vector.</param>
+            <returns>True if they are approximately equal, component wise.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ApproximatelyEqual(UnityEngine.Quaternion,UnityEngine.Quaternion)">
+            <summary>
+            Compares 2 quaternions.
+            </summary>
+            <param name="a">First quat.</param>
+            <param name="b">Second quat.</param>
+            <returns>True if they are approximately equal.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.GetPath(UnityEngine.GameObject)">
+            <summary>
+            Gets the path of a GameObject.
+            </summary>
+            <param name="gameObject">The gameobject.</param>
+            <returns>The full path of the gameobject.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.CreateRig(System.String,UnityEngine.GameObject,UnityEngine.GameObject,UnityEngine.GameObject)">
+            <summary>
+            Builds a rig from an avatar and two hands.
+            </summary>
+            <param name="name">The name of the rig.</param>
+            <param name="avatar">The avatar prefab.</param>
+            <param name="leftHand">The left hand prefab.</param>
+            <param name="rightHand">The right hand prefab.</param>
+            <returns>The parent gameobject.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.RequestMicrophone(System.Action{System.Boolean})">
+            <summary>
+            Cross platform request microphone function.
+            </summary>
+            <param name="onResponse">Request is async so on completion this callback is invoked.</param>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.GetCodecs">
+            <summary>
+            Returns an array of all available codecs.
+            </summary>
+            <returns>An array of all the available codecs.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ToStruct``1(System.Byte[])">
+            <summary>
+            Converts a byte array to struct.
+            </summary>
+            <param name="data">The data.</param>
+            <typeparam name="T">The struct type.</typeparam>
+            <returns>The struct.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ReadStruct``1(System.IO.BinaryReader)">
+            <summary>
+            Reads a struct from a binary reader.
+            </summary>
+            <param name="reader">The reader.</param>
+            <typeparam name="T">The struct type.</typeparam>
+            <returns>The struct.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ReinterpretArray``1(System.Byte[])">
+            <summary>
+            Reinterprets a byte array as an array of a different type.
+            </summary>
+            <param name="bytes">The byte array.</param>
+            <typeparam name="T">The type to reinterpret as.</typeparam>
+            <returns>The reinterpreted array.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ToBytes``1(``0)">
+            <summary>
+            Converts a struct to byte array.
+            </summary>
+            <param name="data">The struct.</param>
+            <typeparam name="T">The struct type.</typeparam>
+            <returns>The byte array.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.CreateCodec(System.String)">
+            <summary>
+            Creates a codec by name.
+            </summary>
+            <param name="name">The name of the codec.</param>
+            <returns>The codec instance.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.FindCodecNameByExtensions(System.String)">
+            <summary>
+            Finds a codec name by extension.
+            </summary>
+            <param name="extension">The extension to search for.</param>
+            <returns>The name of the codec (to be used in <see cref="M:MAGES.Recorder.Utilities.CreateCodec(System.String)"/>.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.LinearResample(System.Single[],System.Int32,System.Single[],System.Int32,System.Int32)">
+            <summary>
+            Resamples a signal using linear interpolation.
+            </summary>
+            <param name="ss">Source samples.</param>
+            <param name="sh">Source sample rate (Hz).</param>
+            <param name="ts">Target samples.</param>
+            <param name="th">Target sample rate (Hz).</param>
+            <param name="nts">Number of samples to write to <paramref name="ts"/>.</param>
+            <remarks>
+            To calculate <paramref name="nts"/>, use <see cref="M:MAGES.Recorder.Utilities.LinearResampleAvailable(System.UInt32,System.Int32,System.UInt32,System.Int32,System.UInt32@,System.UInt32@)"/>.
+            </remarks>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.LinearResampleAvailable(System.UInt32,System.Int32,System.UInt32,System.Int32,System.UInt32@,System.UInt32@)">
+            <summary>
+            Calculates the number of samples that can be written to the target buffer.
+            </summary>
+            <param name="nss">Number of samples available in source buffer.</param>
+            <param name="sh">Source sample rate (Hz).</param>
+            <param name="nts">Number of samples available in target buffer.</param>
+            <param name="th">Target sample rate (Hz).</param>
+            <param name="sr">Number of samples that can be used from the source buffer.</param>
+            <param name="tr">Number of samples that can be written to the target buffer.</param>
+            <returns>True if resampling is possible, false otherwise.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.LinearResampleNumTargetSamplesRequired(System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Calculates the number of samples that can be written to the target buffer.
+            </summary>
+            <param name="sourceSamples">The source sample count.</param>
+            <param name="sourceSampleRate">The source sample rate.</param>
+            <param name="targetSampleRate">The target sample rate.</param>
+            <returns>The amount of target samples that will be produced.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.DateToRecorderString(System.DateTime)">
+            <summary>
+            Converts a date time to a string.
+            </summary>
+            <param name="dateTime">The date time instance.</param>
+            <returns>The encoded string.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.RecorderStringToDate(System.String)">
+            <summary>
+            Converts a string to a date time.
+            </summary>
+            <param name="dateTime">The date time.</param>
+            <returns>Date time instance, otherwise null if parse failed.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ToRecordingLength(System.TimeSpan)">
+            <summary>
+            Converts a time span to a recording length string.
+            </summary>
+            <param name="timeSpan">The timespan.</param>
+            <returns>The string of the timespan.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.GetRecordingFromPathAsync(System.String)">
+            <summary>
+            Gathers recording information from a given path.
+            </summary>
+            <param name="path">The path of the XREC file to open.</param>
+            <returns>The recording class.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.GetAllRecordingsAsync(System.String,MAGES.IAuthenticationAPI,System.String)">
+            <summary>
+            Gets all recordings.
+            </summary>
+            <param name="product">The product to look for.</param>
+            <param name="auth">The authentication api.</param>
+            <param name="baseUrl">The baseurl to use.</param>
+            <returns>A list of local and remote recordings.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.GetRecordingLength(System.String)">
+            <summary>
+            Gets the recording length in seconds.
+            </summary>
+            <param name="path">The path of the recording.</param>
+            <returns>The duration of the recording (in seconds).</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.CreateProxyHierarchy">
+            <summary>
+            Used to create the hierarchy for the recorder.
+            </summary>
+            <returns>The created gameobject.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ClientIdString(System.Int32)">
+            <summary>
+            Gets the client id string.
+            </summary>
+            <param name="clientId">The id.</param>
+            <returns>The string uniquely identifying the client.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ClientRig(System.Int32)">
+            <summary>
+            Gets the client rig name.
+            </summary>
+            <param name="clientId">The client id.</param>
+            <returns>The name of the rig gameobject for that client.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ClientCamera(System.Int32)">
+            <summary>
+            Gets the client camera name.
+            </summary>
+            <param name="clientId">The client id.</param>
+            <returns>The camera gameobject name for that client.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ClientLeftHand(System.Int32)">
+            <summary>
+            Gets the left hand name for a client.
+            </summary>
+            <param name="clientId">The client Id.</param>
+            <returns>The name of the left hand gameobject.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ClientLeftHandBone(System.String,System.Int32)">
+            <summary>
+            Gets the left hand bone name for a client.
+            </summary>
+            <param name="bone">The bone name.</param>
+            <param name="clientId">The client id.</param>
+            <returns>The name of the corresponding bone.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ClientRightHand(System.Int32)">
+            <summary>
+            Gets the right hand name for a client.
+            </summary>
+            <param name="clientId">The client Id.</param>
+            <returns>The name of the right hand gameobject.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.ClientRightHandBone(System.String,System.Int32)">
+            <summary>
+            Gets the right hand bone name for a client.
+            </summary>
+            <param name="bone">The bone name.</param>
+            <param name="clientId">The client id.</param>
+            <returns>The name of the corresponding bone.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.Puppet(UnityEngine.GameObject)">
+            <summary>
+            Disables/removes relevant components so that the GameObject can be controlled from the interpreters.
+            </summary>
+            <param name="gameObject">The game object to puppet.</param>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.GetChildrenRecursively(UnityEngine.GameObject)">
+            <summary>
+            Gets all children of a gameobject recursively.
+            </summary>
+            <param name="gameObject">The gameobject.</param>
+            <returns>All of the children under this gameobject's hierarchy.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.Utilities.EventDelegator">
+            <summary>
+            A class that can delegate events to happen after n count of frames.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.EventDelegator.Add(UnityEngine.Events.UnityAction,System.Int32)">
+            <summary>
+            Add invocation.
+            </summary>
+            <param name="action">The action to run.</param>
+            <param name="frame">The frames to wait to run this function. Set to 0 to invoke at end of frame.</param>
+        </member>
+        <member name="T:MAGES.Recorder.Utilities.RingBuffer`1">
+            <summary>
+            A ring buffer template class.
+            </summary>
+            <typeparam name="T">The type of data to hold.</typeparam>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.RingBuffer`1.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.Utilities.RingBuffer`1"/> class.
+            </summary>
+            <param name="size">How big the ring buffer should be.</param>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.RingBuffer`1.ReadCountUnsafe">
+            <summary>
+            Gets the number of elements that can be read (unsafe, no lock).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.RingBuffer`1.WriteCountUnsafe">
+            <summary>
+            Gets the number of elements that can be written (unsafe, no lock).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.RingBuffer`1.ReadCursorUnsafe">
+            <summary>
+            Gets the read cursor (unsafe, no lock).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.RingBuffer`1.WriteCursorUnsafe">
+            <summary>
+            Gets the write cursor (unsafe, no lock).
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.RingBuffer`1.Size">
+            <summary>
+            Gets the size of the ring buffer.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.RingBuffer`1.ReadCount">
+            <summary>
+            Gets the number of elements that can be read.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.RingBuffer`1.WriteCount">
+            <summary>
+            Gets the number of elements that can be written.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.RingBuffer`1.TryWrite(`0[])">
+            <summary>
+            Writes data to the ring buffer.
+            </summary>
+            <param name="data">The data to write.</param>
+            <returns>True only if all the data was written. Otherwise nothing is written and the function returns false.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.RingBuffer`1.Read(System.UInt32)">
+            <summary>
+            Reads data from the ring buffer.
+            </summary>
+            <param name="maxCount">The max number of items to read.</param>
+            <returns>An array of read items, if no items could be read, returns null.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.Utilities.EventForwarder">
+            <summary>
+            Forwards event to a chosen destination.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.Utilities.EventForwarder.EventSourceType">
+            <summary>
+            The source callback of the event.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Utilities.EventForwarder.EventSourceType.OnPointerClick">
+            <summary>
+            The event came from an <see cref="T:UnityEngine.EventSystems.IPointerClickHandler"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Utilities.EventForwarder.EventSourceType.OnPointerEnter">
+            <summary>
+            The event came from an <see cref="T:UnityEngine.EventSystems.IPointerEnterHandler"/>.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Utilities.EventForwarder.EventSourceType.OnPointerExit">
+            <summary>
+            The event came from an <see cref="T:UnityEngine.EventSystems.IPointerExitHandler"/>.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.EventForwarder.ForwardAction">
+            <summary>
+            Gets or sets the action to call when this game object handles a click event.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.EventForwarder.OnPointerClick(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            Handle pointer click event.
+            </summary>
+            <param name="eventData">The event data.</param>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.EventForwarder.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            Handle pointer enter event.
+            </summary>
+            <param name="eventData">The event data.</param>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.EventForwarder.OnPointerExit(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            Handle pointer exit event.
+            </summary>
+            <param name="eventData">The event data.</param>
+        </member>
+        <member name="T:MAGES.Recorder.Utilities.EventForwarder.Event">
+            <summary>
+            Represents an event.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.EventForwarder.Event.PointerEventData">
+            <summary>
+            Gets or sets the pointer event data.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.EventForwarder.Event.GameObject">
+            <summary>
+            Gets or sets the game object.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.EventForwarder.Event.SourceType">
+            <summary>
+            Gets or sets the source type of the event.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.Utilities.UserAvatarDelegator">
+            <summary>
+            Manages events for when users connect and spawn their avatar and hands.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.UserAvatarDelegator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.Utilities.UserAvatarDelegator"/> class.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.Utilities.UserAvatarDelegator.OnEvtHandler">
+            <summary>
+            Occurs when an event happens.
+            </summary>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="E:MAGES.Recorder.Utilities.UserAvatarDelegator.OnEvent">
+            <summary>
+            Invoked when an event happens.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.Utilities.UserAvatarDelegator.EvtType">
+            <summary>
+            Represents the type of the change in an event.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Utilities.UserAvatarDelegator.EvtType.Enter">
+            <summary>
+            A user entered the session.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Utilities.UserAvatarDelegator.EvtType.Exit">
+            <summary>
+            A user exited the session.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Utilities.UserAvatarDelegator.EvtType.SpawnAvatar">
+            <summary>
+            A user spawned their avatar.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Utilities.UserAvatarDelegator.EvtType.SpawnLeftHand">
+            <summary>
+            A user spawned their left hand.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.Utilities.UserAvatarDelegator.EvtType.SpawnRightHand">
+            <summary>
+            A user spawned their right hand.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.UserAvatarDelegator.Collect">
+            <summary>
+            Gets or sets a value indicating whether the delegator is collecting events or sending them immediately.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.UserAvatarDelegator.AddDefaultUser(System.String,UnityEngine.GameObject,UnityEngine.GameObject,UnityEngine.GameObject,System.Int32)">
+            <summary>
+            Adds the default user.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="avatar">User's avatar.</param>
+            <param name="leftHand">User's left hand.</param>
+            <param name="rightHand">User's right hand.</param>
+            <param name="id">The user id.</param>
+        </member>
+        <member name="T:MAGES.Recorder.Utilities.UserAvatarDelegator.Evt">
+            <summary>
+            Represents a change regarding user's connection/disconnection.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.Utilities.UserAvatarDelegator.Evt.#ctor(MAGES.Recorder.Utilities.UserAvatarDelegator.EvtType,System.Int32,UnityEngine.GameObject,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MAGES.Recorder.Utilities.UserAvatarDelegator.Evt"/> class.
+            </summary>
+            <param name="typ">The type.</param>
+            <param name="actor">The actor.</param>
+            <param name="go">The gameobject.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.UserAvatarDelegator.Evt.Type">
+            <summary>
+            Gets the event type.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.UserAvatarDelegator.Evt.Actor">
+            <summary>
+            Gets the actor of the event.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.UserAvatarDelegator.Evt.Name">
+            <summary>
+            Gets the name, if available.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.UserAvatarDelegator.Evt.GameObject">
+            <summary>
+            Gets the associated gameobject of the event.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.Utilities.MicrophoneRequester.ResponseCallback">
+            <summary>
+            Gets or sets the callback when microphone request receives a response.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.WaveCodec">
+            <summary>
+            A codec for Wave (.wav) files.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.WaveCodec.Format">
+            <summary>
+            The audio format of a WAVE file.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.Format.PCM">
+            <summary>
+            PCM format.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.Format.IEEEFloat">
+            <summary>
+            IEEE float format.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.WaveCodec.Name">
+            <summary>
+            Gets the name of the library implementing a codec.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.WaveCodec.Extensions">
+            <summary>
+            Gets the file extensions supported by the codec.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.WaveCodec.Priority">
+            <summary>
+            Gets the priority of the codec.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.WaveCodec.ASCIIToUInt32(System.String)">
+            <summary>
+            Converts 4 ASCII characters to a uint32.
+            </summary>
+            <param name="str">The string to convert.</param>
+            <returns>The converted value.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.WaveCodec.CreateEncoder(System.IO.BinaryWriter,System.Int32,System.Int32,MAGES.Recorder.PCM.Format,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Creates an encoder for the codec.
+            </summary>
+            <param name="writer">The writer to write the encoded data to.</param>
+            <param name="sampleRate">Sample rate of the input data.</param>
+            <param name="channels">Number of channels used.</param>
+            <param name="format">Format of the input data.</param>
+            <param name="options">Options for the encoder.</param>
+            <returns>An encoder interface for this audio codec.</returns>
+        </member>
+        <member name="M:MAGES.Recorder.WaveCodec.CreateDecoder(System.IO.BinaryReader,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Creates a decoder for the codec.
+            </summary>
+            <param name="reader">The reader to read the encoded data from.</param>
+            <param name="options">Options for the decoder.</param>
+            <returns>A decoder interface for this audio codec.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.WaveCodec.Chunk">
+            <summary>
+            A RIFF chunk.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.Chunk.ChunkID">
+            <summary>
+            The chunk ID.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.Chunk.ChunkSize">
+            <summary>
+            The size of the chunk.
+            </summary>
+        </member>
+        <member name="T:MAGES.Recorder.WaveCodec.WaveChunk">
+            <summary>
+            A WAVE chunk.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.WaveChunk.ChunkID">
+            <summary>
+            The RIFF chunk descriptor (0x52, 0x49, 0x46, 0x46).
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.WaveChunk.FileSize">
+            <summary>
+            The size of the file, minus 8 bytes.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.WaveChunk.FileFormatID">
+            <summary>
+            The WAVE chunk descriptor (0x57, 0x41, 0x56, 0x45).
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.WaveCodec.WaveChunk.Create">
+            <summary>
+            Creates a new WAVE chunk.
+            </summary>
+            <returns>The WAVE chunk.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.WaveCodec.FmtChunk">
+            <summary>
+            A FMT chunk.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.FmtChunk.ChunkID">
+            <summary>
+            The chunk ID.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.FmtChunk.ChunkSize">
+            <summary>
+            The size of the chunk.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.FmtChunk.AudioFormat">
+            <summary>
+            The audio format.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.FmtChunk.NrChannels">
+            <summary>
+            The number of channels.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.FmtChunk.Frequence">
+            <summary>
+            The sample rate (Hz).
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.FmtChunk.BytesPerSec">
+            <summary>
+            The byte rate (Frequence * BytePerBloc).
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.FmtChunk.BytePerBloc">
+            <summary>
+            The number of bytes per bloc (NrChannels * BitsPerSample / 8).
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.FmtChunk.BitsPerSample">
+            <summary>
+            The number of bits per sample.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.WaveCodec.FmtChunk.Create">
+            <summary>
+            Creates a new FMT chunk.
+            </summary>
+            <returns>The new chunk.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.WaveCodec.DataChunk">
+            <summary>
+            A data chunk.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.DataChunk.ChunkID">
+            <summary>
+            The chunk ID.
+            </summary>
+        </member>
+        <member name="F:MAGES.Recorder.WaveCodec.DataChunk.ChunkSize">
+            <summary>
+            The size of the chunk.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.WaveCodec.DataChunk.Create">
+            <summary>
+            Creates a new data chunk.
+            </summary>
+            <returns>The new chunk.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.WaveDecoder">
+            <summary>
+            Represents a decoder for the WAVE file format.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.WaveDecoder.SampleRate">
+            <summary>
+            Gets the sample rate of the audio data.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.WaveDecoder.Channels">
+            <summary>
+            Gets the number of channels.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.WaveDecoder.Format">
+            <summary>
+            Gets the format of the audio data.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.WaveDecoder.Reader">
+            <summary>
+            Gets or sets the reader.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.WaveDecoder.Position">
+            <summary>
+            Gets or sets the position (in samples).
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.WaveDecoder.Deinit">
+            <summary>
+            Deinitializes the decoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.WaveDecoder.Init">
+            <summary>
+            Initializes the decoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.WaveDecoder.Read(System.Int32,System.Int32@)">
+            <summary>
+            Read a number of samples.
+            </summary>
+            <param name="numSamples">The number of samples to read.</param>
+            <param name="numSamplesRead">The number of samples read.</param>
+            <returns>The samples.</returns>
+        </member>
+        <member name="T:MAGES.Recorder.WaveEncoder">
+            <summary>
+            An encoder for the <see cref="T:MAGES.Recorder.WaveCodec"/>.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.WaveEncoder.Channels">
+            <summary>
+            Gets or sets the number of channels.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.WaveEncoder.SampleRate">
+            <summary>
+            Gets or sets the sample rate.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.WaveEncoder.Format">
+            <summary>
+            Gets or sets the format.
+            </summary>
+        </member>
+        <member name="P:MAGES.Recorder.WaveEncoder.Writer">
+            <summary>
+            Gets or sets the writer.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.WaveEncoder.Init">
+            <summary>
+            Initializes the encoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.WaveEncoder.Deinit">
+            <summary>
+            Deinitializes the encoder.
+            </summary>
+        </member>
+        <member name="M:MAGES.Recorder.WaveEncoder.PushSamples(System.Single[],System.Int32)">
+            <summary>
+            Push a sample to the encoder.
+            </summary>
+            <param name="data">The sample data.</param>
+            <param name="channels">The number of channels.</param>
+        </member>
+    </members>
+</doc>

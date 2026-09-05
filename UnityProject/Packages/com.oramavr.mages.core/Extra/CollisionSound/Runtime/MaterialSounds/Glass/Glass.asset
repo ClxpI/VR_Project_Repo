@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -742819698, guid: 4ca934caed7945ae80bd238c0ecdb38f, type: 3}
+  m_Name: Glass
+  m_EditorClassIdentifier: 
+  materialName: Glass
+  materialSoundVariations:
+  - materialSounds:
+    - {fileID: 8300000, guid: 8521e0b31b12ca54aa6876691f2703b2, type: 3}
+    - {fileID: 8300000, guid: 7b102311831e888439300655a756bff8, type: 3}
+    - {fileID: 8300000, guid: dfe8d549aa7f3c646875ff7cafa5bb0f, type: 3}
+  - materialSounds:
+    - {fileID: 8300000, guid: 32d7668f6dda6804a9294a6e8657c7c6, type: 3}
+    - {fileID: 8300000, guid: dec97b76658a8ad4697e85e86bb11547, type: 3}
+    - {fileID: 8300000, guid: 89a9b64a2def2d641b9425bfb3724aa6, type: 3}
+  - materialSounds:
+    - {fileID: 8300000, guid: 87f4c13aae7bc1d448b18e4466dbe095, type: 3}
+    - {fileID: 8300000, guid: d1549a6b3099e3e4fb4a6f243d61ba61, type: 3}
+    - {fileID: 8300000, guid: 29f6d37cd4d35d6499f1533f90d9f2e4, type: 3}
